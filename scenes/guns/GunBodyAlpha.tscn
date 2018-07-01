@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/guns/GunBodyAlpha.gd" type="Script" id=1]
+[ext_resource path="res://graphics/gun_graphics/gun_alpha_body.png" type="Texture" id=2]
+[ext_resource path="res://scenes/guns/BarellAlpha.tscn" type="PackedScene" id=3]
+
+[node name="GunBodyAlpha" type="StaticBody2D"]
+
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+
+[node name="Sprite_body" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 6.99529, -22.9883, 15.9821, -22.9883, 20.9753, -17.9698, 20.9753, -7.97769, 22.0211, -7.97611, 23.0097, -6.98756, 23.0097, 2.04034, 21.9762, 3.02889, 21.055, 3.02889, 21.055, 5.00212, 20.044, 5.00212, 20.044, 12.9516, 17.9995, 12.9516, 17.9995, 15.0054, 16.9986, 15.9715, 8.97784, 15.9715, 8.97564, 17.9936, 7.021, 17.9936, 7.021, 21.9702, -7.0007, 21.9702, -7.0007, 18.016, -9.02274, 18.0199, -9.02274, 15.9754, -16.9224, 15.9656, -18.0258, 14.9726, -18.0258, 13.0141, -19.9566, 13.0141, -19.9877, 4.99467, -20.9497, 5.00308, -21.9978, 2.96188, -21.9978, 1.99645, -22.9633, 1.99645, -22.9912, -7.00758, -21.9982, -8.00059, -21.0328, -7.99668, -21.0328, -17.9346, -16.0125, -22.9588, -7.02024, -22.9588, -7.02771, -15.9627, -7.99858, -14.967, -8.99436, -14.967, -8.99436, -7.96901, -9.96523, -7.96901, -9.96523, -0.00283813, 9.98261, 0.0220556, 9.98261, -7.99655, 8.98684, -7.99655, 8.98684, -14.9918, 8.01596, -14.9945, 6.9704, -16.0152 )
+
+[node name="BarellAlpha" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 0, -17 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_Area2D_mouse_entered"]
+
+

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/guns/BarellAlpha.gd" type="Script" id=1]
+[ext_resource path="res://graphics/gun_graphics/gun_alpha_barrel.png" type="Texture" id=2]
+
+[node name="BarellAlpha" type="StaticBody2D" index="0"]
+
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+
+[node name="Sprite_barell" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -2.99685, -27.0301, 3.00047, -27.0301, 3.00889, -25.9815, 4.00433, -25.9815, 4.00433, -21.9863, 3.00889, -21.9863, 2.99544, -14.0002, 3.97743, -14.0002, 3.97949, -8.99356, 4.99363, -8.9874, 4.99363, -5.98726, 10.9788, -5.98726, 12.9897, -3.94769, 12.9897, 0.0107985, 10.9865, 0.0107985, 10.9844, 4.99538, 12.0042, 4.99467, 12.9876, 5.99088, 12.9853, 16.0176, 7.99457, 16.0176, 7.99457, 22.9605, 6.98142, 24.0112, 1.01395, 24.0108, 1.01395, 26.0018, -4.01322, 25.9999, -4.98885, 24.9493, -4.98885, 24.0487, -7.0153, 24.0487, -7.99092, 22.8854, -7.99092, 15.981, -11.9685, 15.981, -13.0192, 14.9678, -13.0192, 13.9922, -16.0211, 13.9922, -16.0211, 4.00989, -14.9704, 2.95921, -10.9929, 2.95921, -10.9988, -1.02146, -12.9896, -1.02146, -12.9896, -3.98217, -10.9478, -6.02405, -4.99076, -6.00065, -4.99076, -9.00158, -3.99721, -9.00158, -4.01749, -14.0099, -2.98306, -14.004, -2.98306, -21.9673, -3.95295, -21.9673, -3.99235, -26.0103, -2.99685, -26.0103 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_BarellAlpha_mouse_entered"]
+
+

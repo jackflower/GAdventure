@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/waterpump/Casing.gd" type="Script" id=1]
+[ext_resource path="res://graphics/waterpump_graphics/water_pump_casing_graphics.png" type="Texture" id=2]
+
+[node name="Casing" type="StaticBody2D" index="0"]
+
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 9.01181, -26.9691, 24.9778, -26.9691, 24.9778, -25.0149, 29.0524, -25.0149, 29.0688, -23.9876, 29.9857, -23.9876, 29.9895, -17.9856, 29.0196, -17.9856, 29.0196, -13.0341, 29.9725, -13.0536, 29.9725, 8.91457, 29.0242, 8.9223, 29.0242, 10.0399, 24.9942, 10.0399, 24.9942, 11.022, 24.046, 11.022, 24.046, 14.9842, 20.9981, 14.9842, 20.9981, 17.9644, 24.0798, 17.9644, 24.0798, 23.9625, 17.0094, 23.9625, 17.0094, 18.9842, 7.96724, 18.9842, 7.96724, 14.9881, 9.99918, 14.9881, 9.99918, 9.9644, -0.973275, 9.9644, -0.973275, -19.9438, 9.98728, -19.9572, 9.98728, -22.9678, 6.03306, -22.9453, 6.03799, -25.9725 )
+
+[node name="Label" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="mouse_entered" from="." to="." method="_on_Casing_mouse_entered"]
+
+[connection signal="mouse_exited" from="." to="." method="_on_Casing_mouse_exited"]
+
+

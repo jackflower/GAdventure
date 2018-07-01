@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/plants/BushComponent.tscn" type="PackedScene" id=1]
+
+[node name="BushSmall" type="Node2D" index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="BushComponent_01" parent="." index="0" instance=ExtResource( 1 )]
+
+modulate = Color( 0.226563, 0.0778809, 0.0778809, 0.381216 )
+position = Vector2( -72.884, -19.4714 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="BushComponent_02" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( -76.208, -23.9034 )
+rotation = 0.593412
+
+[node name="BushComponent_03" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 45.343, -3.57442 )
+rotation = 0.593412
+
+
