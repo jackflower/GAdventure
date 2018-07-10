@@ -11,7 +11,7 @@
 [ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=10]
 
-[node name="Main" type="Node2D" index="0"]
+[node name="Main" type="Node2D"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
