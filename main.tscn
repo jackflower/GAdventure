@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -10,8 +10,9 @@
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerAlpha.tscn" type="PackedScene" id=11]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
@@ -116,7 +117,7 @@ position = Vector2( 83.067, 511.219 )
 [node name="EngineDelta" parent="." index="15" instance=ExtResource( 6 )]
 
 modulate = Color( 0.71875, 0.634521, 0.634521, 0.845294 )
-position = Vector2( 614.238, 323.26 )
+position = Vector2( 831.362, 358.334 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="WaterPump_1" parent="." index="16" instance=ExtResource( 7 )]
@@ -140,6 +141,10 @@ position = Vector2( 224.374, 246.151 )
 
 [node name="GunBodyAlpha" parent="." index="20" instance=ExtResource( 10 )]
 
-position = Vector2( 476.002, 218.794 )
+position = Vector2( 626.318, 173.699 )
+
+[node name="DefensiveTowerAlpha" parent="." index="21" instance=ExtResource( 11 )]
+
+position = Vector2( 559.511, 265.559 )
 
 
