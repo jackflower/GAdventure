@@ -2,7 +2,7 @@
 
 [ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_alpha/defensive_tower_turret_alpha.png" type="Texture" id=1]
 
-[node name="DefensiveTowerTurretAlpha" type="Node2D"]
+[node name="DefensiveTowerTurretAlpha" type="Node2D" index="0"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
