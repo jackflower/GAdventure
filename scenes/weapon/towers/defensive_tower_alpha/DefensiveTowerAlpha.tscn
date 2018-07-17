@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerAlpha.gd" type="Script" id=1]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerBaseAlpha.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerTurretAlpha.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerCannonAlpha.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerBarrelAlpha.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerBulletChamberAlpha.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerAlpha.gd" type="Script" id=1]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerBaseAlpha.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerTurretAlpha.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerCannonAlpha.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerBarrelAlpha.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerBulletChamberAlpha.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -62,7 +62,7 @@ tracks/3/keys = {
 "values": [ true, false, true, false, true ]
 }
 
-[node name="DefensiveTowerAlpha" type="Node2D" index="0"]
+[node name="DefensiveTowerAlpha" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]

@@ -10,7 +10,7 @@
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerAlpha.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Node2D" index="0"]
 
