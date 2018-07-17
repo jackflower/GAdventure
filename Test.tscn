@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/shooting/bullet/Bullet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerBulletAlpha.tscn" type="PackedScene" id=3]
 
 [node name="Test" type="Node2D" index="0"]
 
@@ -12,5 +13,10 @@ position = Vector2( 506.485, 59.4659 )
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 422.412, 172.246 )
+
+[node name="DefensiveTowerBulletAlpha" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 326.037, 79.9713 )
+_sections_unfolded = [ "Transform" ]
 
 

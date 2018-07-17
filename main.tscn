@@ -12,7 +12,7 @@
 [ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower/DefensiveTowerAlpha.tscn" type="PackedScene" id=11]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
