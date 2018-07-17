@@ -66,6 +66,12 @@ tracks/3/keys = {
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+shot_speed = 1
+created_bullet_speed = 200
+created_bullet_scale_factor = 0.5
+shooting_series = true
+bullet_caliber = 2
+tower_shot_range = 200
 
 [node name="Base" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -101,5 +107,7 @@ blend_times = [  ]
 [node name="bullet_start_Position2D" type="Position2D" parent="." index="2"]
 
 position = Vector2( 0, -38 )
+
+[connection signal="animation_finished" from="AnimationPlayerTowerAlpha" to="." method="_on_AnimationPlayerTowerAlpha_animation_finished"]
 
 

@@ -50,7 +50,5 @@ func explode():
 
 
 func _on_VisibilityNotifier2D_screen_exited():
-	print("The missile left the window of the game")
 	queue_free()
-	print("The missile has been removed")
 	pass

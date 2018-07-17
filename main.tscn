@@ -133,11 +133,11 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Player" parent="." index="18" instance=ExtResource( 8 )]
 
-position = Vector2( 455.221, 334.239 )
+position = Vector2( 334.968, 421.089 )
 
 [node name="Tower" parent="." index="19" instance=ExtResource( 9 )]
 
-position = Vector2( 224.374, 246.151 )
+position = Vector2( 115.812, 92.4942 )
 
 [node name="GunBodyAlpha" parent="." index="20" instance=ExtResource( 10 )]
 
