@@ -1,7 +1,7 @@
 extends Node2D
 
 # Scinfor - jackflower
-# July 16, 2018
+# July 18, 2018
 #
 # The scene represents an automatic defensive tower
 
@@ -22,7 +22,7 @@ var tower_rotation = 0
 var distance_to_target = 0
 var target_position = Vector2(0, 0)
 var bullet_vector = Vector2(0, 0)
-var bullet_data = preload("DefensiveTowerBulletAlpha.tscn")
+var bullet_data = preload("DefensiveTowerBulletBeta.tscn")
 
 # Inspector - modification:
 #	- rate of fire - number of shots per unit of time
@@ -66,8 +66,8 @@ func _physics_process(delta):
 			pass
 		
 		if(shooting and not prev_shooting and can_shoot_animation):
-			$AnimationPlayerTowerAlpha.play("tower_alpha_animation")
-			$AnimationPlayerTowerAlpha.playback_speed = shot_speed
+			$AnimationPlayerTowerBeta.play("tower_beta_animation")
+			$AnimationPlayerTowerBeta.playback_speed = shot_speed
 			can_shoot_animation = false
 			create_bullet()
 			pass
@@ -95,8 +95,8 @@ func create_bullet():
 	# add a projectile to the scene
 	get_parent().add_child(bullet)
 	pass
-	
-	
+#
+#
 func setTarget( target ):
 	my_target = target
 	target_reference = weakref(my_target)
@@ -104,6 +104,6 @@ func setTarget( target ):
 	pass
 
 
-func _on_AnimationPlayerTowerAlpha_animation_finished( anim_name ):
+func _on_AnimationPlayerTowerBeta_animation_finished( anim_name ):
 	can_shoot_animation = true
 	pass

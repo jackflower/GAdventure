@@ -4,6 +4,7 @@ extends Node2D
 func _ready():
 	$Tower.setTarget($Player)
 	$DefensiveTowerAlpha.setTarget($Player)
+	$DefensiveTowerBeta.setTarget($Player)
 	pass
 	
 	
