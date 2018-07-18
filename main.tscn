@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=12]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -146,5 +147,9 @@ position = Vector2( 626.318, 173.699 )
 [node name="DefensiveTowerAlpha" parent="." index="21" instance=ExtResource( 11 )]
 
 position = Vector2( 559.511, 265.559 )
+
+[node name="DefensiveTowerBeta" parent="." index="22" instance=ExtResource( 12 )]
+
+position = Vector2( 696.466, 308.984 )
 
 

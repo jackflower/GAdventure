@@ -1,5 +1,11 @@
 #	2018-07-18
-#	Wszystkie sceny przygotowywac jako Area2D,
-#	a nastepnie awansowac do oczekiwanego typu.
+#	Wszystkie sceny przygotowywać jako Area2D,
+#	a następnie awansować do oczekiwanego typu.
 
-#	ą ź ż ę ł ń ć ś
+#	2018-07-18
+#	W kolenej wersji wieży obronnej dodać gotową
+#	scenę - silnik
+
+#	2018-07-18
+#	Warto przenieść wcześniej zaprojektowane
+#	silniki do tego projektu
