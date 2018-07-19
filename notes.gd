@@ -1,4 +1,12 @@
-#	2018-07-19
+#	2018-07-23
+#	Wszystkie sceny przygotowywać jako Area2D,
+#	a następnie awansować do oczekiwanego typu.
+
+#	2018-07-23
+#	Przygotować grafikę dla wieży obrobbej Gamma
+#	 - modyfikacja animacji polegająca na podziale tego
+#	 - procesu na dwa: otwarcie luku, oddanie strzału.
+#	2018-07-23
 #	Przygotować nową grafikę:
 #		- defensive_tower_bullet_beta.png,
 #		- defensive_tower_bullet_indicator_beta.png
@@ -6,17 +14,9 @@
 #	pocisk posiada lotki (skrzydełka) oraz inną animację
 #	wskaźnika - może jakiś inny kolor?
 #
-#	Powyższe - proces twórczy...
-
-
-#	2018-07-19
-#	Wszystkie sceny przygotowywać jako Area2D,
-#	a następnie awansować do oczekiwanego typu.
-
-#	2018-07-20
-#	W kolenej wersji wieży obronnej (Gamma) dodać gotową
+#	W kolejnej wersji wieży obronnej (Gamma) dodać gotową
 #	scenę - silnik
 
-#	2018-07-21
+
 #	Warto przenieść wcześniej zaprojektowane
 #	silniki do tego projektu

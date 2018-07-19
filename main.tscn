@@ -123,7 +123,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="WaterPump_1" parent="." index="16" instance=ExtResource( 7 )]
 
-position = Vector2( 562.96, 92.1428 )
+position = Vector2( 466.089, 48.7181 )
 
 [node name="WaterPump_2" parent="." index="17" instance=ExtResource( 7 )]
 
@@ -142,14 +142,14 @@ position = Vector2( 115.812, 92.4942 )
 
 [node name="GunBodyAlpha" parent="." index="20" instance=ExtResource( 10 )]
 
-position = Vector2( 626.318, 173.699 )
+position = Vector2( 968.705, 53.4459 )
 
 [node name="DefensiveTowerAlpha" parent="." index="21" instance=ExtResource( 11 )]
 
-position = Vector2( 559.511, 265.559 )
+position = Vector2( 671.413, 46.7651 )
 
 [node name="DefensiveTowerBeta" parent="." index="22" instance=ExtResource( 12 )]
 
-position = Vector2( 696.466, 308.984 )
+position = Vector2( 676.424, 404.184 )
 
 

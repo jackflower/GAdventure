@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerBulletAlpha.gd" type="Script" id=1]
-[ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_alpha/defensive_tower_bullet_alpha.png" type="Texture" id=2]
-[ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_alpha/defensive_tower_bullet_indicator_alpha.png" type="Texture" id=3]
+[ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_beta/defensive_tower_bullet_beta.png" type="Texture" id=2]
+[ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_beta/defensive_tower_bullet_indicator_beta.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 3, 7 )
+extents = Vector2( 4, 7 )
 
 [sub_resource type="Animation" id=2]
 
@@ -59,9 +59,10 @@ shape = SubResource( 1 )
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="KinematicBody2D" index="3"]
 
 visible = false
-position = Vector2( -0.105396, 0.0335741 )
-scale = Vector2( 0.311628, 0.744504 )
+position = Vector2( 1.3411e-07, 1.49012e-08 )
+scale = Vector2( 0.4, 0.7 )
 rect = Rect2( -10, -10, 20, 20 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D" index="4"]
 
