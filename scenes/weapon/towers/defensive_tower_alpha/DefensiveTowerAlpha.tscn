@@ -94,6 +94,10 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 0, 12 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
+[node name="bullet_start_Position2D" type="Position2D" parent="Base/Turret" index="4"]
+
+position = Vector2( 0, -38 )
+
 [node name="AnimationPlayerTowerAlpha" type="AnimationPlayer" parent="." index="1"]
 
 root_node = NodePath("..")
@@ -103,10 +107,6 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/tower_alpha_animation = SubResource( 1 )
 blend_times = [  ]
-
-[node name="bullet_start_Position2D" type="Position2D" parent="." index="2"]
-
-position = Vector2( 0, -38 )
 
 [connection signal="animation_finished" from="AnimationPlayerTowerAlpha" to="." method="_on_AnimationPlayerTowerAlpha_animation_finished"]
 

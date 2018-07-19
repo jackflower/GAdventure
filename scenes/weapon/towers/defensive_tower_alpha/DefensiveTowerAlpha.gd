@@ -59,7 +59,7 @@ func _physics_process(delta):
 			distance_to_target = global_position.distance_to(target_position)
 			
 			if(distance_to_target <= tower_shot_range):
-				rotation_degrees = -rad2deg(tower_rotation)
+				$Base/Turret.rotation_degrees = -rad2deg(tower_rotation)
 				shooting = true
 			else:
 				shooting = false
@@ -80,7 +80,7 @@ func create_bullet():
 	# bullet - creation of an instance
 	var bullet = bullet_data.instance()
 	# bullet - position
-	bullet.position = $bullet_start_Position2D.global_position
+	bullet.position = $Base/Turret/bullet_start_Position2D.global_position
 	# bullet - scale
 	bullet.global_scale = global_scale * created_bullet_scale_factor
 	# bullet - speed
