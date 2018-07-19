@@ -2,9 +2,9 @@
 
 [ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_beta/defensive_tower_cannon_beta.png" type="Texture" id=1]
 
-[node name="DefensiveTowerCannon_beta" type="Node2D" index="0"]
+[node name="DefensiveTowerCannon_beta" type="Node2D"]
 
-[node name="TowerCannon" type="StaticBody2D" parent="." index="0"]
+[node name="TowerCannonBeta" type="StaticBody2D" parent="." index="0"]
 
 position = Vector2( 0.0115337, 0 )
 input_pickable = false
@@ -15,11 +15,11 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="Sprite_cannon" type="Sprite" parent="TowerCannon" index="0"]
+[node name="Sprite_cannon" type="Sprite" parent="TowerCannonBeta" index="0"]
 
 texture = ExtResource( 1 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TowerCannon" index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TowerCannonBeta" index="1"]
 
 visible = false
 build_mode = 0
