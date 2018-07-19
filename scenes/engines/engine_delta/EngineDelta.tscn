@@ -46,7 +46,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -2 ), Vector2( 0, 0 ), Vector2( 0, 2 ), Vector2( 0, 0 ) ]
 }
 
-[node name="EngineDelta" type="Node2D" index="0"]
+[node name="EngineDelta" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
