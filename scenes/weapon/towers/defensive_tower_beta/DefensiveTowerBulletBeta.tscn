@@ -28,7 +28,7 @@ tracks/0/keys = {
 "values": [ true, false, true, false, true ]
 }
 
-[node name="DefensiveTowerBulletBeta" type="Node2D" index="0"]
+[node name="DefensiveTowerBulletBeta" type="Node2D"]
 
 script = ExtResource( 1 )
 

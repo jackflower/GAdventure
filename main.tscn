@@ -5,15 +5,15 @@
 [ext_resource path="res://scenes/plants/BushComponent.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/plants/Plant.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/plants/BushSmall.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/engines/engine_delta/EngineDelta.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/waterpump/WaterPump.tscn" type="PackedScene" id=7]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/waterpump/WaterPump.tscn" type="PackedScene" id=6]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=12]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
@@ -115,41 +115,39 @@ position = Vector2( 178.494, 452.145 )
 
 position = Vector2( 83.067, 511.219 )
 
-[node name="EngineDelta" parent="." index="15" instance=ExtResource( 6 )]
-
-modulate = Color( 0.71875, 0.634521, 0.634521, 0.845294 )
-position = Vector2( 831.362, 358.334 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="WaterPump_1" parent="." index="16" instance=ExtResource( 7 )]
+[node name="WaterPump_1" parent="." index="15" instance=ExtResource( 6 )]
 
 position = Vector2( 466.089, 48.7181 )
 
-[node name="WaterPump_2" parent="." index="17" instance=ExtResource( 7 )]
+[node name="WaterPump_2" parent="." index="16" instance=ExtResource( 6 )]
 
 modulate = Color( 1, 1, 1, 0.801098 )
 position = Vector2( 242.537, 151.056 )
 scale = Vector2( 1.25, 1.25 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="Player" parent="." index="18" instance=ExtResource( 8 )]
+[node name="Player" parent="." index="17" instance=ExtResource( 7 )]
 
 position = Vector2( 334.968, 421.089 )
 
-[node name="Tower" parent="." index="19" instance=ExtResource( 9 )]
+[node name="Tower" parent="." index="18" instance=ExtResource( 8 )]
 
 position = Vector2( 115.812, 92.4942 )
 
-[node name="GunBodyAlpha" parent="." index="20" instance=ExtResource( 10 )]
+[node name="GunBodyAlpha" parent="." index="19" instance=ExtResource( 9 )]
 
 position = Vector2( 968.705, 53.4459 )
 
-[node name="DefensiveTowerAlpha" parent="." index="21" instance=ExtResource( 11 )]
+[node name="DefensiveTowerAlpha" parent="." index="20" instance=ExtResource( 10 )]
 
 position = Vector2( 671.413, 46.7651 )
 
-[node name="DefensiveTowerBeta" parent="." index="22" instance=ExtResource( 12 )]
+[node name="DefensiveTowerBeta" parent="." index="21" instance=ExtResource( 11 )]
 
 position = Vector2( 676.424, 404.184 )
+
+[node name="DefensiveTowerGamma" parent="." index="22" instance=ExtResource( 12 )]
+
+position = Vector2( 841.772, 350.738 )
 
 
