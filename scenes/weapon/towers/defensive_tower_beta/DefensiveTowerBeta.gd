@@ -32,7 +32,7 @@ var bullet_data = preload("DefensiveTowerBulletBeta.tscn")
 #	- caliber transferred to the projectile
 #	- the range of the shot from the tower
 export (float) var shot_speed = 1
-export (float) var created_bullet_speed = 40
+export (float) var created_bullet_speed = 200
 export (float) var created_bullet_scale_factor = 0.5
 export (bool) var shooting_series = true
 export (float) var bullet_caliber = 2

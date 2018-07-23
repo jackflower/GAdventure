@@ -67,8 +67,8 @@ func _physics_process(delta):
 		
 		if(shooting and not prev_shooting and can_shoot_animation):
 			create_bullet()
-			$AnimationPlayerTowerBeta.play("tower_beta_animation")
-			$AnimationPlayerTowerBeta.playback_speed = shot_speed
+			$AnimationPlayerTowerGamma.play("tower_gamma_animation")
+			$AnimationPlayerTowerGamma.playback_speed = shot_speed
 			can_shoot_animation = false
 			pass
 		if(not shooting_series):
@@ -104,6 +104,6 @@ func setTarget( target ):
 	pass
 
 
-func _on_AnimationPlayerTowerBeta_animation_finished( anim_name ):
+func _on_AnimationPlayerTowerGamma_animation_finished( anim_name ):
 	can_shoot_animation = true
 	pass

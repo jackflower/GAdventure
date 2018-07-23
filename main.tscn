@@ -13,7 +13,7 @@
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=12]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
@@ -144,10 +144,11 @@ position = Vector2( 671.413, 46.7651 )
 
 [node name="DefensiveTowerBeta" parent="." index="21" instance=ExtResource( 11 )]
 
-position = Vector2( 676.424, 404.184 )
+position = Vector2( 846.783, 359.089 )
+created_bullet_speed = 200
 
 [node name="DefensiveTowerGamma" parent="." index="22" instance=ExtResource( 12 )]
 
-position = Vector2( 841.772, 350.738 )
+position = Vector2( 379.131, 173.699 )
 
 
