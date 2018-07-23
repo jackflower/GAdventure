@@ -31,7 +31,7 @@ var bullet_data = preload("DefensiveTowerBulletAlpha.tscn")
 #	- single fire / continuous fire
 #	- caliber transferred to the projectile
 #	- the range of the shot from the tower
-export (float) var  shot_speed = 1
+export (float) var shot_speed = 1
 export (float) var created_bullet_speed = 200
 export (float) var created_bullet_scale_factor = 0.5
 export (bool) var shooting_series = true
@@ -66,10 +66,10 @@ func _physics_process(delta):
 			pass
 		
 		if(shooting and not prev_shooting and can_shoot_animation):
+			create_bullet()
 			$AnimationPlayerTowerAlpha.play("tower_alpha_animation")
 			$AnimationPlayerTowerAlpha.playback_speed = shot_speed
 			can_shoot_animation = false
-			create_bullet()
 			pass
 		if(not shooting_series):
 			prev_shooting = shooting
@@ -89,7 +89,7 @@ func create_bullet():
 	bullet_vector = (target_position - global_position).normalized()
 	bullet.bullet_direction = Vector2(bullet_vector)
 	# bullet - rotation
-	bullet.global_rotation_degrees = rotation_degrees
+	bullet.global_rotation_degrees = $Base/Turret.rotation_degrees
 	# caliber
 	bullet.caliber = bullet_caliber
 	# add a projectile to the scene

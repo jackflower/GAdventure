@@ -1,34 +1,34 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerBulletAlpha.gd" type="Script" id=1]
-[ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_alpha/defensive_tower_bullet_alpha.png" type="Texture" id=2]
-[ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_alpha/defensive_tower_bullet_indicator_alpha.png" type="Texture" id=3]
+[ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_gamma/defensive_tower_bullet_gamma.png" type="Texture" id=2]
+[ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_gamma/defensive_tower_bullet_indicator_gamma.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 2, 5 )
+extents = Vector2( 2.5, 5.5 )
 
 [sub_resource type="Animation" id=2]
 
-resource_name = "defensive_tower_bullet_alpha_animation"
+resource_name = "defensive_tower_bullet_gamma_animation"
 length = 1.0
 loop = true
 step = 0.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite_bullet_indicator:visible")
+tracks/0/path = NodePath("Sprite_bullet_indicator:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, true, false, true ]
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2 ), Vector2( 0, 3 ), Vector2( 0, -2 ) ]
 }
 
-[node name="DefensiveTowerBulletAlpha" type="Node2D" index="0"]
+[node name="DefensiveTowerBulletGamma" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -45,7 +45,7 @@ texture = ExtResource( 2 )
 
 [node name="Sprite_bullet_indicator" type="Sprite" parent="KinematicBody2D" index="1"]
 
-position = Vector2( 0, -4.5 )
+position = Vector2( 0, -2 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -55,23 +55,23 @@ visible = false
 position = Vector2( -0.00173426, 0 )
 scale = Vector2( 0.999714, 1 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="KinematicBody2D" index="3"]
 
 visible = false
-position = Vector2( -0.105396, 0.0335741 )
-scale = Vector2( 0.311628, 0.744504 )
+position = Vector2( 1.3411e-07, 1.49012e-08 )
+scale = Vector2( 0.4, 0.7 )
 rect = Rect2( -10, -10, 20, 20 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D" index="4"]
 
 root_node = NodePath("..")
-autoplay = "defensive_tower_bullet_alpha_animation"
+autoplay = "defensive_tower_bullet_gamma_animation"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/defensive_tower_bullet_alpha_animation = SubResource( 2 )
+anims/defensive_tower_bullet_gamma_animation = SubResource( 2 )
 blend_times = [  ]
 
 [connection signal="screen_exited" from="KinematicBody2D/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

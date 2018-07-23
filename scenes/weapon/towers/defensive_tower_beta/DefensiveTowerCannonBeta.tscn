@@ -2,7 +2,7 @@
 
 [ext_resource path="res://graphics/weapon_graphics/defensive_tower_graphics/defensive_tower_graphics_beta/defensive_tower_cannon_beta.png" type="Texture" id=1]
 
-[node name="DefensiveTowerCannon_beta" type="Node2D"]
+[node name="DefensiveTowerCannonGamma" type="Node2D" index="0"]
 
 [node name="TowerCannonBeta" type="StaticBody2D" parent="." index="0"]
 

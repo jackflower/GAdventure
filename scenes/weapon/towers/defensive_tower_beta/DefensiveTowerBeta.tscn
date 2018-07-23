@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.gd" type="Script" id=1]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBaseBeta.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerTurretBeta.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerCannon_beta.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerCannonBeta.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBarrelBeta.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerCannonShieldBeta.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBulletChamberBeta.tscn" type="PackedScene" id=7]
@@ -75,18 +75,20 @@ tracks/4/keys = {
 "values": [ Vector2( 0, 14 ), Vector2( 0, 20 ), Vector2( 0, 20 ), Vector2( 0, 14 ) ]
 }
 
-[node name="DefensiveTowerBeta" type="Node2D" index="0"]
+[node name="DefensiveTowerBeta" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
 shot_speed = 1
-created_bullet_speed = 200
+created_bullet_speed = 40
 created_bullet_scale_factor = 0.5
 shooting_series = true
 bullet_caliber = 2
 tower_shot_range = 200
 
 [node name="Base" parent="." index="0" instance=ExtResource( 2 )]
+
+editor/display_folded = true
 
 [node name="Turret" parent="Base" index="1" instance=ExtResource( 3 )]
 
@@ -118,7 +120,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="bullet_start_Position2D" type="Position2D" parent="Base/Turret" index="3"]
 
-position = Vector2( 0, -38 )
+position = Vector2( 0, -45 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimationPlayerTowerBeta" type="AnimationPlayer" parent="." index="1"]

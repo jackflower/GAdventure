@@ -46,7 +46,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -2 ), Vector2( 0, 0 ), Vector2( 0, 2 ), Vector2( 0, 0 ) ]
 }
 
-[node name="DefensiveTowerBaseGamma" type="Node2D"]
+[node name="DefensiveTowerBaseGamma" type="Node2D" index="0"]
 
 [node name="TowerBaseGamma" type="StaticBody2D" parent="." index="0"]
 

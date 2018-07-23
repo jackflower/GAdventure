@@ -1,7 +1,7 @@
 extends Node2D
 
 # Scinfor - jackflower
-# July 18, 2018
+# July 23, 2018
 #
 # The scene represents an automatic defensive tower
 
@@ -22,7 +22,7 @@ var tower_rotation = 0
 var distance_to_target = 0
 var target_position = Vector2(0, 0)
 var bullet_vector = Vector2(0, 0)
-var bullet_data = preload("DefensiveTowerBulletBeta.tscn")
+var bullet_data = preload("DefensiveTowerBulletGamma.tscn")
 
 # Inspector - modification:
 #	- rate of fire - number of shots per unit of time
@@ -31,8 +31,8 @@ var bullet_data = preload("DefensiveTowerBulletBeta.tscn")
 #	- single fire / continuous fire
 #	- caliber transferred to the projectile
 #	- the range of the shot from the tower
-export (float) var shot_speed = 1
-export (float) var created_bullet_speed = 40
+export (float) var  shot_speed = 1
+export (float) var created_bullet_speed = 200
 export (float) var created_bullet_scale_factor = 0.5
 export (bool) var shooting_series = true
 export (float) var bullet_caliber = 2
