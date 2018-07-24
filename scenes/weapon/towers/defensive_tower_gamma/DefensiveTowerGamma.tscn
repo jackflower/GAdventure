@@ -89,6 +89,8 @@ tower_shot_range = 200
 
 [node name="Turret" parent="Base" index="2" instance=ExtResource( 3 )]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="Cannon" parent="Base/Turret" index="1" instance=ExtResource( 4 )]
 
 _sections_unfolded = [ "Transform" ]
@@ -115,7 +117,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="bullet_start_Position2D" type="Position2D" parent="Base/Turret" index="2"]
 
-position = Vector2( 0, -45 )
+position = Vector2( 0, -50 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimationPlayerTowerGamma" type="AnimationPlayer" parent="." index="1"]

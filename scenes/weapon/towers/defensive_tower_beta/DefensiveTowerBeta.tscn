@@ -80,15 +80,13 @@ tracks/4/keys = {
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
 shot_speed = 1
-created_bullet_speed = 40
+created_bullet_speed = 200
 created_bullet_scale_factor = 0.5
 shooting_series = true
 bullet_caliber = 2
 tower_shot_range = 200
 
 [node name="Base" parent="." index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
 
 [node name="Turret" parent="Base" index="1" instance=ExtResource( 3 )]
 
@@ -120,7 +118,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="bullet_start_Position2D" type="Position2D" parent="Base/Turret" index="3"]
 
-position = Vector2( 0, -45 )
+position = Vector2( 0, -50 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimationPlayerTowerBeta" type="AnimationPlayer" parent="." index="1"]

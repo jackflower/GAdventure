@@ -1,5 +1,18 @@
+#	2018-07-24
+#	Opracowanie obiektu Tower:
+	#	- funkcjonalność
+	#	- mechanika
+	#	- składowe
+	#		-	grafika
+	#	- dobór komponentów
+	#	- fizyka oraz kolizje
+	#	- logika
+	#	- skrypt "Tower.gd" - dla obiektów
+	#     klasy (sceny) Tower.tscn
+
+
 #	2018-07-23
-#	Przygotować grafikę dla wieży obrobbej Gamma
+#	Przygotować grafikę dla wieży obronnej Gamma
 #	 - modyfikacja animacji polegająca na podziale tego
 #	 - procesu na dwa: otwarcie luku, oddanie strzału.
 #	2018-07-23
