@@ -6,6 +6,7 @@ func _ready():
 	$DefensiveTowerAlpha.setTarget($Player)
 	$DefensiveTowerBeta.setTarget($Player)
 	$DefensiveTowerGamma.setTarget($Player)
+	$DefensiveTowerDelta.setTarget($Player)
 	pass
 	
 	

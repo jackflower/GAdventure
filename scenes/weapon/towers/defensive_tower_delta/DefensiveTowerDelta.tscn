@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.gd" type="Script" id=1]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerBaseDelta.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerTurretDelta.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerCannonDelta.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerBarrelDelta.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerBulletChamberDelta.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "tower_delta_animation"
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Base/Turret/Cannon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 8 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Base/Turret/Cannon/Barrel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -6 ), Vector2( 0, -2 ), Vector2( 0, -6 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Base/Turret/Cannon/BulletChamber:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 22 ), Vector2( 0, 26 ), Vector2( 0, 22 ) ]
+}
+
+[node name="DefensiveTowerDelta" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+shot_speed = 1
+created_bullet_speed = 200
+created_bullet_scale_factor = 0.5
+shooting_series = true
+bullet_caliber = 2
+tower_shot_range = 200
+
+[node name="Base" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Turret" parent="Base" index="2" instance=ExtResource( 3 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Cannon" parent="Base/Turret" index="1" instance=ExtResource( 4 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Barrel" parent="Base/Turret/Cannon" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 0, -6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BulletChamber" parent="Base/Turret/Cannon" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 0, 22 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bullet_start_Position2D" type="Position2D" parent="Base/Turret" index="2"]
+
+position = Vector2( 0, -52 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimationPlayerTowerDelta" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/tower_delta_animation = SubResource( 1 )
+blend_times = [  ]
+
+[connection signal="animation_finished" from="AnimationPlayerTowerDelta" to="." method="_on_AnimationPlayerTowerDelta_animation_finished"]
+
+
