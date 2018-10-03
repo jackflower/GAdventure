@@ -32,3 +32,12 @@
 
 #	Warto przenieść wcześniej zaprojektowane
 #	silniki do tego projektu
+
+#	2018-08-15...
+#	Testy:
+#	Przygotować wieżę z "długą" lufą,
+#	 - testowanie, czy lufa się obraca
+#	   zadwadza, gdy napotka przeszkodę
+#	Wniosek:
+#	- taka funkcjonalność wymaga osobnego opracowania
+#

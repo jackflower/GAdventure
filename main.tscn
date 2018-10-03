@@ -14,7 +14,7 @@
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=13]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
@@ -43,7 +43,7 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0 )
-_sections_unfolded = [ "Cell" ]
+_sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="BushComponent_1" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -57,7 +57,7 @@ rotation = 1.19164
 [node name="BushComponent_4" parent="." index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 249.601, 33.5663 )
-rotation = 3.45501
+rotation = -2.82818
 
 [node name="BushComponent_3" parent="." index="4" instance=ExtResource( 3 )]
 
@@ -78,25 +78,25 @@ scale = Vector2( 0.627976, 0.64688 )
 [node name="Plant_3" parent="." index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 840.014, 240.239 )
-rotation = 4.84298
+rotation = -1.44021
 scale = Vector2( 0.440149, 0.404791 )
 
 [node name="Plant_4" parent="." index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 29.9456, 275.834 )
-rotation = 7.08981
+rotation = 0.806625
 scale = Vector2( 0.421544, 0.443161 )
 
 [node name="Plant_5" parent="." index="9" instance=ExtResource( 4 )]
 
 position = Vector2( 54.4524, 202.594 )
-rotation = 6.6562
+rotation = 0.373015
 scale = Vector2( 0.635822, 0.564775 )
 
 [node name="Plant_6" parent="." index="10" instance=ExtResource( 4 )]
 
 position = Vector2( 348.293, 39.3492 )
-rotation = 6.50665
+rotation = 0.223465
 scale = Vector2( 0.635822, 0.564775 )
 
 [node name="BushSmall_2" parent="." index="11" instance=ExtResource( 5 )]
@@ -118,7 +118,9 @@ position = Vector2( 83.067, 511.219 )
 
 [node name="WaterPump_1" parent="." index="15" instance=ExtResource( 6 )]
 
-position = Vector2( 466.089, 48.7181 )
+modulate = Color( 1, 1, 1, 0.574588 )
+position = Vector2( 618.736, 64.1551 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="WaterPump_2" parent="." index="16" instance=ExtResource( 6 )]
 
@@ -129,7 +131,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Player" parent="." index="17" instance=ExtResource( 7 )]
 
-position = Vector2( 470.253, 449.482 )
+position = Vector2( 464.701, 480.943 )
 
 [node name="Tower" parent="." index="18" instance=ExtResource( 8 )]
 
@@ -141,7 +143,7 @@ position = Vector2( 968.705, 53.4459 )
 
 [node name="DefensiveTowerAlpha" parent="." index="20" instance=ExtResource( 10 )]
 
-position = Vector2( 638.009, 70.1477 )
+position = Vector2( 650.963, 319.981 )
 
 [node name="DefensiveTowerBeta" parent="." index="21" instance=ExtResource( 11 )]
 
@@ -149,10 +151,10 @@ position = Vector2( 871.836, 365.77 )
 
 [node name="DefensiveTowerGamma" parent="." index="22" instance=ExtResource( 12 )]
 
-position = Vector2( 465.981, 242.176 )
+position = Vector2( 423.155, 166.506 )
 
 [node name="DefensiveTowerDelta" parent="." index="23" instance=ExtResource( 13 )]
 
-position = Vector2( 292.282, 313.994 )
+position = Vector2( 123.876, 336.201 )
 
 

@@ -62,7 +62,7 @@ tracks/3/keys = {
 "values": [ true, false, true, false, true ]
 }
 
-[node name="DefensiveTowerAlpha" type="Node2D"]
+[node name="DefensiveTowerAlpha" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
