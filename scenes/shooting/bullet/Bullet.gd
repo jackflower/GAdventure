@@ -9,6 +9,7 @@ extends KinematicBody2D
 var bullet_speed = 200 # Pixels/seconds
 var bullet_direction = Vector2(0, 0)
 var caliber = 1
+var bullet_name = "Pocisk"
 
 func _ready():
 	set_physics_process(true)
