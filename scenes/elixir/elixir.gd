@@ -12,7 +12,7 @@ func _process(delta):
 	pass
 
 
-func _on_Testowa_body_entered( body ):
+func _on_Elixir_body_entered( body ):
 	print (body.name)
 	if(body.has_method("update_item")):
 		#print("Alfa")

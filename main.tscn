@@ -13,9 +13,9 @@
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Testowa.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/elixir/Elixir.tscn" type="PackedScene" id=14]
 
-[node name="Main" type="Node2D" index="0"]
+[node name="Main" type="Node2D"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
@@ -158,8 +158,8 @@ position = Vector2( 423.155, 166.506 )
 
 position = Vector2( 128.887, 274.404 )
 
-[node name="Testowa" parent="." index="24" instance=ExtResource( 14 )]
+[node name="Elixir" parent="." index="24" instance=ExtResource( 14 )]
 
-position = Vector2( 450.237, 425.79 )
+position = Vector2( 473.619, 410.759 )
 
 
