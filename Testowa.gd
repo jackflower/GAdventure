@@ -14,5 +14,8 @@ func _process(delta):
 
 func _on_Testowa_body_entered( body ):
 	print (body.name)
-	queue_free()
+	if(body.has_method("update_item")):
+		#print("Alfa")
+		body.update_item()
+	#queue_free()
 	pass

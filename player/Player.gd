@@ -68,3 +68,7 @@ func update_health(damage):
 	health -= damage
 	print(health)
 	pass
+	
+func update_item():
+	print ("Znaleziony")
+	pass
