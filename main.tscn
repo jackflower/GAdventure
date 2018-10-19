@@ -15,7 +15,7 @@
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/elixir/Elixir.tscn" type="PackedScene" id=14]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
@@ -132,7 +132,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Player" parent="." index="17" instance=ExtResource( 7 )]
 
-position = Vector2( 434.638, 509.336 )
+position = Vector2( 466.099, 424.208 )
 
 [node name="Tower" parent="." index="18" instance=ExtResource( 8 )]
 
@@ -144,7 +144,7 @@ position = Vector2( 968.705, 53.4459 )
 
 [node name="DefensiveTowerAlpha" parent="." index="20" instance=ExtResource( 10 )]
 
-position = Vector2( 664.324, 191.377 )
+position = Vector2( 705.038, 156.215 )
 
 [node name="DefensiveTowerBeta" parent="." index="21" instance=ExtResource( 11 )]
 
@@ -152,7 +152,7 @@ position = Vector2( 871.836, 365.77 )
 
 [node name="DefensiveTowerGamma" parent="." index="22" instance=ExtResource( 12 )]
 
-position = Vector2( 423.155, 166.506 )
+position = Vector2( 439.811, 101.734 )
 
 [node name="DefensiveTowerDelta" parent="." index="23" instance=ExtResource( 13 )]
 
@@ -160,6 +160,6 @@ position = Vector2( 128.887, 274.404 )
 
 [node name="Elixir" parent="." index="24" instance=ExtResource( 14 )]
 
-position = Vector2( 473.619, 410.759 )
+position = Vector2( 460.665, 325.631 )
 
 

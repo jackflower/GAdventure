@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-# 2017-11-25 acodemia.pl
+# 2018-10-20 acodemia.pl
 
 const MOTION_SPEED = 160 # Pixels/seconds
 var health = 100
@@ -34,24 +34,12 @@ func _physics_process(delta):
 	if(health <= 0):
 		self.queue_free()	# obiekt ginie...
 		
-	#if(motion):
-	#	print("Kolizja...")
-	#print(".............")
-	#if(collision):w
-	#	print("hola hola...")
-	#motion.collider.has_method("nazwa")
 		
-	#if(move_and_collide(motion)):
-	#	print("Hola hola..")
-#	if(is_colliding()):
-#		set_rotd(90)
-#		get_node("AnimatedSprite").stop()
-#		pass
-#	else:
-#		set_rotd(0)
-#		get_node("AnimatedSprite").play("worm_default_animation")
-#		pass
-#	pass
+	if(motion):
+		print("Kolizja...")
+		get_node("AnimatedSprite").stop()
+	else:
+		get_node("AnimatedSprite").play()
 	
 	
 func _on_VisibilityNotifier2D_enter_screen():
@@ -69,6 +57,8 @@ func update_health(damage):
 	print(health)
 	pass
 	
-func update_item():
-	print ("Znaleziony")
+	
+func update_item( item ):
+	print (self.name + ": znalazłem eliksir " + item)
 	pass
+	
