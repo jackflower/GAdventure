@@ -59,6 +59,6 @@ func update_health(damage):
 	
 	
 func update_item( item ):
-	print (self.name + ": znalazłem eliksir " + item)
+	print (self.name + ": znalazłem " + item)
 	pass
 	
