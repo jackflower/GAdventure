@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -14,7 +14,8 @@
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/elixir/Elixir.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/keycontainer/KeyContainer.tscn" type="PackedScene" id=14]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/storagebox/StorageBox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=16]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -163,7 +164,11 @@ position = Vector2( 347.177, 430.404 )
 
 position = Vector2( 477.208, 348.522 )
 
-[node name="Player" parent="." index="25" instance=ExtResource( 15 )]
+[node name="StorageBox" parent="." index="25" instance=ExtResource( 15 )]
+
+position = Vector2( 567.48, 417.831 )
+
+[node name="Player" parent="." index="26" instance=ExtResource( 16 )]
 
 position = Vector2( 478.214, 421.109 )
 

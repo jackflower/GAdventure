@@ -24,7 +24,9 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 17.6251
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D" index="0" groups=[
+"Gracze",
+]]
 
 input_pickable = false
 collision_layer = 1
@@ -36,7 +38,6 @@ script = ExtResource( 1 )
 
 frames = SubResource( 1 )
 animation = "worm_default_animation"
-frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

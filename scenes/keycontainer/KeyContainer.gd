@@ -17,8 +17,8 @@ var item
 	
 	
 func _on_Area2D_body_entered( body ):
-	
 	# prawo do aktywacji czujnika schowka na klucze ma tylko Player
+	#if(body.is_in_group("Gracze")): # docelowa implementacja
 	if(body.has_method("update_item")):
 		print (body.name + " szuka klucza")
 		#uruchomienie animacji otwierania schowka
