@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://scenes/keycontainer/KeyContainer.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/storagebox/StorageBox.tscn" type="PackedScene" id=15]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://goldcoins/GoldCoins.tscn" type="PackedScene" id=17]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -171,5 +172,9 @@ position = Vector2( 567.48, 417.831 )
 [node name="Player" parent="." index="26" instance=ExtResource( 16 )]
 
 position = Vector2( 478.214, 421.109 )
+
+[node name="GoldCoins" parent="." index="27" instance=ExtResource( 17 )]
+
+position = Vector2( 507.069, 210.97 )
 
 
