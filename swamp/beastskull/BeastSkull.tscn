@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://swamp/beastskull/beast_skull.png" type="Texture" id=1]
+
+[node name="BeastSkull" type="StaticBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -1.6723, -20.9712, -0.169811, -23.7615, 3.90838, -23.5469, 6.48408, -20.9712, 18.7187, -20.7565, 19.1479, -1.65344, 10.3476, 8.64936, 13.3526, 17.0204, 17.8601, 18.0936, 22.1529, 13.5861, 21.509, 19.3814, 15.2844, 23.8889, 11.2062, 23.0303, 4.98159, 16.8057, 1.97661, 20.4546, -5.96513, 21.7425, -8.97012, 18.9522, -4.248, 14.23, -4.46264, 9.50792, -7.46762, 10.3665, -9.18476, 15.5179, -16.0533, 15.7325, -20.5608, 16.3765, -22.9218, 13.3715, -22.2779, 3.92724, -19.9168, 11.869, -16.6972, 11.6543, -11.7605, 4.14188, -15.8386, 1.78082, -16.0533, -2.08273, -19.2729, -2.29737, -19.4876, -5.08771, -21.634, -5.08771, -21.634, -7.87805, -16.0533, -9.1659, -16.2679, -15.6051, -14.5508, -15.1759, -14.7654, -18.3955, -11.5458, -21.6151, -4.46264, -21.6151 )
+
+

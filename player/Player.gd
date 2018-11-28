@@ -5,6 +5,12 @@ extends KinematicBody2D
 const MOTION_SPEED = 160 # Pixels/seconds
 var health = 100
 var on_scene = false
+var elixirs = 0
+var cash_gold = 0
+var cash_silver = 0
+var cash_copper = 0
+
+var slyboots = false
 
 
 func _ready():
@@ -40,7 +46,7 @@ func _physics_process(delta):
 		get_node("AnimatedSprite").stop()
 	else:
 		get_node("AnimatedSprite").play()
-	
+		
 	
 func _on_VisibilityNotifier2D_enter_screen():
 	on_scene = true
@@ -60,5 +66,24 @@ func update_health(damage):
 	
 func update_item( item ):
 	print (self.name + ": znalazłem " + item)
+	elixirs = elixirs + 1
+	print ("Ilość eliksirów: " + String(elixirs))
 	pass
 	
+func update_cash_gold( item ):
+	print (self.name + ": znalazłem " + item)
+	cash_gold = cash_gold + 1
+	print ("Złoto: " + String(cash_gold))
+	pass
+	
+func update_cash_silver( item ):
+	print (self.name + ": znalazłem " + item)
+	cash_silver = cash_silver + 1
+	print ("Srebro: " + String(cash_silver))
+	pass
+	
+func update_cash_copper( item ):
+	print (self.name + ": znalazłem " + item)
+	cash_copper = cash_copper + 1
+	print ("Miedź: " + String(cash_copper))
+	pass	

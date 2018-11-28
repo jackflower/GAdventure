@@ -38,6 +38,7 @@ script = ExtResource( 1 )
 
 frames = SubResource( 1 )
 animation = "worm_default_animation"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

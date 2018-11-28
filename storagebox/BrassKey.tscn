@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://storagebox/brass_key.png" type="Texture" id=1]
+
+
+[node name="BrassKey" type="Area2D" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 11.2561, -31.306, 26.4382, -21.5508, 26.4382, -14.7663, 20.7582, -9.71737, 14.7626, -8.92847, 11.7647, -11.4529, -16.7933, 30.7604, -21.2464, 29.0248, -19.5109, 26.5003, -26.6109, 20.0314, -20.9309, 12.3002, -13.9886, 17.1914, 8.10048, -14.2659, 2.57821, -19.157, 2.42043, -24.206 )
+
+

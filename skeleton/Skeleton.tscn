@@ -1,0 +1,43 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://skeleton/warrior_skeleton_01.png" type="Texture" id=1]
+[ext_resource path="res://skeleton/warrior_skeleton_02.png" type="Texture" id=2]
+[ext_resource path="res://skeleton/warrior_skeleton_03.png" type="Texture" id=3]
+[ext_resource path="res://skeleton/warrior_skeleton_04.png" type="Texture" id=4]
+[ext_resource path="res://skeleton/warrior_skeleton_05.png" type="Texture" id=5]
+[ext_resource path="res://skeleton/warrior_skeleton_06.png" type="Texture" id=6]
+[ext_resource path="res://skeleton/warrior_skeleton_07.png" type="Texture" id=7]
+[ext_resource path="res://skeleton/warrior_skeleton_08.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "skeleton_animation",
+"speed": 2.0
+} ]
+
+[node name="Skeleton" type="StaticBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "skeleton_animation"
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -14, -15, -14, -10, -22, -4, -21, -1, -18, 2, -18, 5, -12, 8, -21, 11, -17, 19, -3, 23, 4, 22, 8, 22, 10, 24, 21, 24, 22, 21, 22, 18, 18, 13, 18, -3, 22, -5, 22, -7, 17, -14, 18, -18, 16, -21, 13, -18, 1, -30, -2, -30, -2, -28, 5, -21, -4, -21, -8, -16 )
+
+

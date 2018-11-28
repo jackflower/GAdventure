@@ -12,13 +12,13 @@
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/elixir/Elixir.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/keycontainer/KeyContainer.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/storagebox/StorageBox.tscn" type="PackedScene" id=15]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=16]
-[ext_resource path="res://goldcoins/GoldCoins.tscn" type="PackedScene" id=17]
-[ext_resource path="res://tree_demo.png" type="Texture" id=18]
-[ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/keycontainer/KeyContainer.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/storagebox/StorageBox.tscn" type="PackedScene" id=14]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://goldcoins/GoldCoins.tscn" type="PackedScene" id=16]
+[ext_resource path="res://tree_demo.png" type="Texture" id=17]
+[ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=18]
+[ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=19]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -48,7 +48,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0 )
+tile_data = PoolIntArray( -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="BushComponent_1" parent="." index="1" instance=ExtResource( 3 )]
@@ -145,7 +145,7 @@ position = Vector2( 968.705, 53.4459 )
 
 [node name="DefensiveTowerAlpha" parent="." index="19" instance=ExtResource( 9 )]
 
-position = Vector2( 705.038, 156.215 )
+position = Vector2( 729.096, 295.011 )
 
 [node name="DefensiveTowerBeta" parent="." index="20" instance=ExtResource( 10 )]
 
@@ -159,34 +159,48 @@ position = Vector2( 452.114, 54.5714 )
 
 position = Vector2( 114.533, 260.05 )
 
-[node name="Elixir" parent="." index="23" instance=ExtResource( 13 )]
+[node name="KeyContainer" parent="." index="23" instance=ExtResource( 13 )]
 
-position = Vector2( 224.144, 317.624 )
+position = Vector2( 121.7, 349.414 )
 
-[node name="KeyContainer" parent="." index="24" instance=ExtResource( 14 )]
-
-position = Vector2( 323.417, 471.555 )
-
-[node name="StorageBox" parent="." index="25" instance=ExtResource( 15 )]
+[node name="StorageBox" parent="." index="24" instance=ExtResource( 14 )]
 
 position = Vector2( 567.48, 417.831 )
 
-[node name="Player" parent="." index="26" instance=ExtResource( 16 )]
+[node name="Player" parent="." index="25" instance=ExtResource( 15 )]
 
 position = Vector2( 437.203, 451.867 )
 
-[node name="GoldCoins" parent="." index="27" instance=ExtResource( 17 )]
+[node name="GoldCoins" parent="." index="26" instance=ExtResource( 16 )]
 
-position = Vector2( 966.391, 120.746 )
+position = Vector2( 345.076, 239.678 )
 
-[node name="tree_demo" type="Sprite" parent="." index="28"]
+[node name="tree_demo" type="Sprite" parent="." index="27"]
 
 position = Vector2( 797.531, -46.6822 )
 scale = Vector2( 0.370563, 0.385671 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
-[node name="Shaggy" parent="." index="29" instance=ExtResource( 19 )]
+[node name="Shaggy" parent="." index="28" instance=ExtResource( 18 )]
 
 position = Vector2( 607.641, 257.386 )
+
+[node name="Elixir" parent="." index="29" instance=ExtResource( 19 )]
+
+position = Vector2( 329.41, 353.468 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Elixir2" parent="." index="30" instance=ExtResource( 19 )]
+
+position = Vector2( 397.883, 360.871 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Elixir3" parent="." index="31" instance=ExtResource( 19 )]
+
+position = Vector2( 501.518, 457.103 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
 
 

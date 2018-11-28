@@ -20,10 +20,9 @@ var item
 	
 func _on_Elixir_body_entered( body ):
 	print (self.name + ": znalazł mnie " + body.name)
-	#if(body.is_in_group("Gracze")): # docelowa implementacja
 	if(body.has_method("update_item")):
 		item = self.name
 		body.update_item( item )
-	queue_free() # zagadka
+	queue_free()
 	pass
 	

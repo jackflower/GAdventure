@@ -1,10 +1,12 @@
 extends Node2D
 
+# 2018-12-01
+# Acodemia - testowanie gotowej gry
+#
 
 func _ready():
 	$Tower.setTarget($Player)
 	$DefensiveTowerAlpha.setTarget($Player)
-	$DefensiveTowerAlpha.setTarget($Shaggy)
 	$DefensiveTowerBeta.setTarget($Player)
 	$DefensiveTowerGamma.setTarget($Player)
 	$DefensiveTowerDelta.setTarget($Player)
