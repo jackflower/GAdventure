@@ -50,29 +50,30 @@ func _ready():
 	
 	
 func _physics_process(delta):
-	if (tower_process_enabled and target_reference.get_ref()):
-		if(target_reference.get_ref().on_scene):
-			target_position = target_reference.get_ref().global_position
-			tower_rotation = atan2(( global_position.x - target_position.x ),
-					( global_position.y - target_position.y ))
+	if(my_target):
+		if (tower_process_enabled and target_reference.get_ref()):
+			if(target_reference.get_ref().on_scene):
+				target_position = target_reference.get_ref().global_position
+				tower_rotation = atan2(( global_position.x - target_position.x ),
+						( global_position.y - target_position.y ))
+				
+				distance_to_target = global_position.distance_to(target_position)
+				
+				if(distance_to_target <= tower_shot_range):
+					$Base/Turret.rotation_degrees = -rad2deg(tower_rotation)
+					shooting = true
+				else:
+					shooting = false
+				pass
 			
-			distance_to_target = global_position.distance_to(target_position)
-			
-			if(distance_to_target <= tower_shot_range):
-				$Base/Turret.rotation_degrees = -rad2deg(tower_rotation)
-				shooting = true
-			else:
-				shooting = false
-			pass
-		
-		if(shooting and not prev_shooting and can_shoot_animation):
-			create_bullet()
-			$AnimationPlayerTowerGamma.play("tower_gamma_animation")
-			$AnimationPlayerTowerGamma.playback_speed = shot_speed
-			can_shoot_animation = false
-			pass
-		if(not shooting_series):
-			prev_shooting = shooting
+			if(shooting and not prev_shooting and can_shoot_animation):
+				create_bullet()
+				$AnimationPlayerTowerGamma.play("tower_gamma_animation")
+				$AnimationPlayerTowerGamma.playback_speed = shot_speed
+				can_shoot_animation = false
+				pass
+			if(not shooting_series):
+				prev_shooting = shooting
 	pass
 	
 	

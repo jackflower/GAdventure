@@ -1,3 +1,5 @@
+# 2018-12-10
+
 #	2018-07-24
 #	Opracowanie obiektu Tower:
 	#	- funkcjonalność
