@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -19,7 +19,8 @@
 [ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=17]
 [ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=18]
 [ext_resource path="res://graphics/ground_graphics/ground_02.png" type="Texture" id=19]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=20]
+[ext_resource path="res://mine/Mine.tscn" type="PackedScene" id=20]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=21]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -55,158 +56,159 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="BushComponent_1" parent="TileMap" index="0" instance=ExtResource( 3 )]
+[node name="BushComponent_1" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 55.1649, 27.7823 )
+position = Vector2( 54.1649, 27.7823 )
 
-[node name="BushComponent_2" parent="." index="1" instance=ExtResource( 3 )]
+[node name="BushComponent_2" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 157.096, 21.323 )
 rotation = 1.19164
 
-[node name="BushComponent_4" parent="." index="2" instance=ExtResource( 3 )]
+[node name="BushComponent_4" parent="." index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 249.601, 33.5663 )
 rotation = -2.82818
 
-[node name="BushComponent_3" parent="." index="3" instance=ExtResource( 3 )]
+[node name="BushComponent_3" parent="." index="4" instance=ExtResource( 3 )]
 
 position = Vector2( 22.3207, 120.661 )
 
-[node name="Plant_1" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Plant_1" parent="." index="5" instance=ExtResource( 4 )]
 
 position = Vector2( 773.968, 192.025 )
 rotation = 0.42214
 scale = Vector2( 0.654957, 0.606788 )
 
-[node name="Plant_2" parent="." index="5" instance=ExtResource( 4 )]
+[node name="Plant_2" parent="." index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 905.243, 207.909 )
 rotation = 2.5393
 scale = Vector2( 0.627976, 0.64688 )
 
-[node name="Plant_3" parent="." index="6" instance=ExtResource( 4 )]
+[node name="Plant_3" parent="." index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 840.014, 240.239 )
 rotation = -1.44021
 scale = Vector2( 0.440149, 0.404791 )
 
-[node name="Plant_4" parent="." index="7" instance=ExtResource( 4 )]
+[node name="Plant_4" parent="." index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 29.9456, 275.834 )
 rotation = 0.806625
 scale = Vector2( 0.421544, 0.443161 )
 
-[node name="Plant_5" parent="." index="8" instance=ExtResource( 4 )]
+[node name="Plant_5" parent="." index="9" instance=ExtResource( 4 )]
 
 position = Vector2( 54.4524, 202.594 )
 rotation = 0.373015
 scale = Vector2( 0.635822, 0.564775 )
 
-[node name="Plant_6" parent="." index="9" instance=ExtResource( 4 )]
+[node name="Plant_6" parent="." index="10" instance=ExtResource( 4 )]
 
 position = Vector2( 348.293, 39.3492 )
 rotation = 0.223465
 scale = Vector2( 0.635822, 0.564775 )
 
-[node name="BushSmall_2" parent="." index="10" instance=ExtResource( 5 )]
+[node name="BushSmall_2" parent="." index="11" instance=ExtResource( 5 )]
 
 position = Vector2( 829.943, 480.212 )
 
-[node name="BushSmall_4" parent="." index="11" instance=ExtResource( 5 )]
+[node name="BushSmall_4" parent="." index="12" instance=ExtResource( 5 )]
 
 position = Vector2( 1002.71, 318.328 )
 rotation = -2.08791
 
-[node name="BushSmall_3" parent="." index="12" instance=ExtResource( 5 )]
+[node name="BushSmall_3" parent="." index="13" instance=ExtResource( 5 )]
 
 position = Vector2( 178.494, 452.145 )
 
-[node name="BushSmall_5" parent="." index="13" instance=ExtResource( 5 )]
+[node name="BushSmall_5" parent="." index="14" instance=ExtResource( 5 )]
 
 position = Vector2( 83.067, 511.219 )
 
-[node name="WaterPump_1" parent="." index="14" instance=ExtResource( 6 )]
+[node name="WaterPump_1" parent="." index="15" instance=ExtResource( 6 )]
 
 modulate = Color( 1, 1, 1, 0.574588 )
 position = Vector2( 618.736, 64.1551 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="WaterPump_2" parent="." index="15" instance=ExtResource( 6 )]
+[node name="WaterPump_2" parent="." index="16" instance=ExtResource( 6 )]
 
 modulate = Color( 1, 1, 1, 0.801098 )
 position = Vector2( 233.74, 103.066 )
 scale = Vector2( 1.25, 1.25 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="Tower" parent="." index="16" instance=ExtResource( 7 )]
+[node name="Tower" parent="." index="17" instance=ExtResource( 7 )]
 
 position = Vector2( 115.812, 92.4942 )
 
-[node name="GunBodyAlpha" parent="." index="17" instance=ExtResource( 8 )]
+[node name="GunBodyAlpha" parent="." index="18" instance=ExtResource( 8 )]
 
 position = Vector2( 968.705, 53.4459 )
 
-[node name="DefensiveTowerAlpha" parent="." index="18" instance=ExtResource( 9 )]
+[node name="DefensiveTowerAlpha" parent="." index="19" instance=ExtResource( 9 )]
 
 position = Vector2( 729.096, 295.011 )
 
-[node name="DefensiveTowerBeta" parent="." index="19" instance=ExtResource( 10 )]
+[node name="DefensiveTowerBeta" parent="." index="20" instance=ExtResource( 10 )]
 
 position = Vector2( 871.836, 365.77 )
 
-[node name="DefensiveTowerGamma" parent="." index="20" instance=ExtResource( 11 )]
+[node name="DefensiveTowerGamma" parent="." index="21" instance=ExtResource( 11 )]
 
 position = Vector2( 452.114, 54.5714 )
 
-[node name="DefensiveTowerDelta" parent="." index="21" instance=ExtResource( 12 )]
+[node name="DefensiveTowerDelta" parent="." index="22" instance=ExtResource( 12 )]
 
 position = Vector2( 114.533, 260.05 )
 
-[node name="KeyContainer" parent="." index="22" instance=ExtResource( 13 )]
+[node name="KeyContainer" parent="." index="23" instance=ExtResource( 13 )]
 
 position = Vector2( 121.7, 349.414 )
 
-[node name="StorageBox" parent="." index="23" instance=ExtResource( 14 )]
+[node name="StorageBox" parent="." index="24" instance=ExtResource( 14 )]
 
-position = Vector2( 567.48, 417.831 )
+position = Vector2( 941.995, 548.579 )
 
-[node name="GoldCoins" parent="." index="24" instance=ExtResource( 15 )]
+[node name="GoldCoins" parent="." index="25" instance=ExtResource( 15 )]
 
 position = Vector2( 345.076, 239.678 )
 
-[node name="tree_demo" type="Sprite" parent="." index="25"]
+[node name="tree_demo" type="Sprite" parent="." index="26"]
 
 position = Vector2( 797.531, -46.6822 )
 scale = Vector2( 0.370563, 0.385671 )
 texture = ExtResource( 16 )
 
-[node name="Shaggy" parent="." index="26" instance=ExtResource( 17 )]
+[node name="Shaggy" parent="." index="27" instance=ExtResource( 17 )]
 
 position = Vector2( 607.641, 257.386 )
 
-[node name="Elixir" parent="." index="27" instance=ExtResource( 18 )]
+[node name="Elixir" parent="." index="28" instance=ExtResource( 18 )]
 
 position = Vector2( 211.41, 289.468 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Elixir2" parent="." index="28" instance=ExtResource( 18 )]
+[node name="Elixir2" parent="." index="29" instance=ExtResource( 18 )]
 
-position = Vector2( 397.883, 360.871 )
+position = Vector2( 386.192, 284.043 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Elixir3" parent="." index="29" instance=ExtResource( 18 )]
+[node name="Elixir3" parent="." index="30" instance=ExtResource( 18 )]
 
-position = Vector2( 501.518, 457.103 )
+position = Vector2( 497.453, 288.357 )
 rotation = -0.0390236
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Trawa" type="Node2D" parent="." index="30"]
+[node name="Trawa" type="Node2D" parent="." index="31"]
 
-position = Vector2( 227.617, 503.874 )
+editor/display_folded = true
+position = Vector2( 229.889, 515.234 )
 rotation = -0.428126
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -233,8 +235,24 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Player" parent="." index="31" instance=ExtResource( 20 )]
+[node name="Mine_1" parent="." index="32" instance=ExtResource( 20 )]
 
-position = Vector2( 365.203, 358.867 )
+position = Vector2( 426.171, 381.947 )
+
+[node name="Mine_2" parent="." index="33" instance=ExtResource( 20 )]
+
+position = Vector2( 512.565, 382.581 )
+
+[node name="Mine_3" parent="." index="34" instance=ExtResource( 20 )]
+
+position = Vector2( 532.607, 497.824 )
+
+[node name="Mine_4" parent="." index="35" instance=ExtResource( 20 )]
+
+position = Vector2( 629.478, 472.771 )
+
+[node name="Player" parent="." index="36" instance=ExtResource( 21 )]
+
+position = Vector2( 436.281, 440.022 )
 
 

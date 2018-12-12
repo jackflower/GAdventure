@@ -19,12 +19,20 @@ func _physics_process(delta):
 	
 	if (Input.is_action_pressed("ui_up")):
 		motion += Vector2(0, -1)
+		#global_rotation_degrees = 0
+		rotation_degrees = 0
 	if (Input.is_action_pressed("ui_down")):
 		motion += Vector2(0, 1)
+		#global_rotation_degrees = 180
+		rotation_degrees = 180
 	if (Input.is_action_pressed("ui_left")):
 		motion += Vector2(-1, 0)
+		#global_rotation_degrees = -90
+		rotation_degrees = -90
 	if (Input.is_action_pressed("ui_right")):
 		motion += Vector2(1, 0)
+		#global_rotation_degrees = 90
+		rotation_degrees = 90
 	
 	motion = motion.normalized() * MOTION_SPEED * delta
 	motion = move_and_collide(motion)
