@@ -1,26 +1,33 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/plants/BushComponent.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/plants/Plant.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/plants/BushSmall.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/waterpump/WaterPump.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/keycontainer/KeyContainer.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/storagebox/StorageBox.tscn" type="PackedScene" id=14]
-[ext_resource path="res://goldcoins/GoldCoins.tscn" type="PackedScene" id=15]
-[ext_resource path="res://tree_demo.png" type="Texture" id=16]
-[ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=17]
-[ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=18]
-[ext_resource path="res://graphics/ground_graphics/ground_02.png" type="Texture" id=19]
-[ext_resource path="res://mine/Mine.tscn" type="PackedScene" id=20]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/plants/plants_b/Plants_B.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/plants/BushSmall.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/waterpump/WaterPump.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/keycontainer/KeyContainer.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/storagebox/StorageBox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://goldcoins/GoldCoins.tscn" type="PackedScene" id=16]
+[ext_resource path="res://tree_demo.png" type="Texture" id=17]
+[ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=18]
+[ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=19]
+[ext_resource path="res://graphics/ground_graphics/ground_02.png" type="Texture" id=20]
+[ext_resource path="res://mine/Mine.tscn" type="PackedScene" id=21]
+[ext_resource path="res://stones/Stone_A.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/plants/plants_a/Plants_A.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/plants/plants_c/Plants_C.tscn" type="PackedScene" id=24]
+[ext_resource path="res://ship_wreck/ShipWreck.tscn" type="PackedScene" id=25]
+[ext_resource path="res://skeleton/DragonSkeleton.tscn" type="PackedScene" id=26]
+[ext_resource path="res://skeleton/MonkeySkeleton.tscn" type="PackedScene" id=27]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=28]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -110,95 +117,99 @@ position = Vector2( 348.293, 39.3492 )
 rotation = 0.223465
 scale = Vector2( 0.635822, 0.564775 )
 
-[node name="BushSmall_2" parent="." index="11" instance=ExtResource( 5 )]
+[node name="PlantsTwo" parent="Plant_6" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 121.123, -243.437 )
+
+[node name="BushSmall_2" parent="." index="11" instance=ExtResource( 6 )]
 
 position = Vector2( 829.943, 480.212 )
 
-[node name="BushSmall_4" parent="." index="12" instance=ExtResource( 5 )]
+[node name="BushSmall_4" parent="." index="12" instance=ExtResource( 6 )]
 
 position = Vector2( 1002.71, 318.328 )
 rotation = -2.08791
 
-[node name="BushSmall_3" parent="." index="13" instance=ExtResource( 5 )]
+[node name="BushSmall_3" parent="." index="13" instance=ExtResource( 6 )]
 
 position = Vector2( 178.494, 452.145 )
 
-[node name="BushSmall_5" parent="." index="14" instance=ExtResource( 5 )]
+[node name="BushSmall_5" parent="." index="14" instance=ExtResource( 6 )]
 
 position = Vector2( 83.067, 511.219 )
 
-[node name="WaterPump_1" parent="." index="15" instance=ExtResource( 6 )]
+[node name="WaterPump_1" parent="." index="15" instance=ExtResource( 7 )]
 
 modulate = Color( 1, 1, 1, 0.574588 )
 position = Vector2( 618.736, 64.1551 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="WaterPump_2" parent="." index="16" instance=ExtResource( 6 )]
+[node name="WaterPump_2" parent="." index="16" instance=ExtResource( 7 )]
 
 modulate = Color( 1, 1, 1, 0.801098 )
 position = Vector2( 233.74, 103.066 )
 scale = Vector2( 1.25, 1.25 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="Tower" parent="." index="17" instance=ExtResource( 7 )]
+[node name="Tower" parent="." index="17" instance=ExtResource( 8 )]
 
 position = Vector2( 115.812, 92.4942 )
 
-[node name="GunBodyAlpha" parent="." index="18" instance=ExtResource( 8 )]
+[node name="GunBodyAlpha" parent="." index="18" instance=ExtResource( 9 )]
 
 position = Vector2( 968.705, 53.4459 )
 
-[node name="DefensiveTowerAlpha" parent="." index="19" instance=ExtResource( 9 )]
+[node name="DefensiveTowerAlpha" parent="." index="19" instance=ExtResource( 10 )]
 
 position = Vector2( 729.096, 295.011 )
 
-[node name="DefensiveTowerBeta" parent="." index="20" instance=ExtResource( 10 )]
+[node name="DefensiveTowerBeta" parent="." index="20" instance=ExtResource( 11 )]
 
 position = Vector2( 871.836, 365.77 )
 
-[node name="DefensiveTowerGamma" parent="." index="21" instance=ExtResource( 11 )]
+[node name="DefensiveTowerGamma" parent="." index="21" instance=ExtResource( 12 )]
 
 position = Vector2( 452.114, 54.5714 )
 
-[node name="DefensiveTowerDelta" parent="." index="22" instance=ExtResource( 12 )]
+[node name="DefensiveTowerDelta" parent="." index="22" instance=ExtResource( 13 )]
 
 position = Vector2( 114.533, 260.05 )
 
-[node name="KeyContainer" parent="." index="23" instance=ExtResource( 13 )]
+[node name="KeyContainer" parent="." index="23" instance=ExtResource( 14 )]
 
 position = Vector2( 121.7, 349.414 )
 
-[node name="StorageBox" parent="." index="24" instance=ExtResource( 14 )]
+[node name="StorageBox" parent="." index="24" instance=ExtResource( 15 )]
 
 position = Vector2( 941.995, 548.579 )
 
-[node name="GoldCoins" parent="." index="25" instance=ExtResource( 15 )]
+[node name="GoldCoins" parent="." index="25" instance=ExtResource( 16 )]
 
 position = Vector2( 345.076, 239.678 )
 
 [node name="tree_demo" type="Sprite" parent="." index="26"]
 
-position = Vector2( 797.531, -46.6822 )
+position = Vector2( 807.552, 0.0828896 )
 scale = Vector2( 0.370563, 0.385671 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 
-[node name="Shaggy" parent="." index="27" instance=ExtResource( 17 )]
+[node name="Shaggy" parent="." index="27" instance=ExtResource( 18 )]
 
-position = Vector2( 607.641, 257.386 )
+position = Vector2( 607.641, 546.328 )
 
-[node name="Elixir" parent="." index="28" instance=ExtResource( 18 )]
+[node name="Elixir" parent="." index="28" instance=ExtResource( 19 )]
 
 position = Vector2( 211.41, 289.468 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Elixir2" parent="." index="29" instance=ExtResource( 18 )]
+[node name="Elixir2" parent="." index="29" instance=ExtResource( 19 )]
 
 position = Vector2( 386.192, 284.043 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Elixir3" parent="." index="30" instance=ExtResource( 18 )]
+[node name="Elixir3" parent="." index="30" instance=ExtResource( 19 )]
 
 position = Vector2( 497.453, 288.357 )
 rotation = -0.0390236
@@ -219,7 +230,7 @@ __meta__ = {
 
 modulate = Color( 0.0703125, 0.0365295, 0.0365295, 0.646392 )
 scale = Vector2( 0.492188, 0.486328 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
@@ -229,29 +240,55 @@ __meta__ = {
 
 position = Vector2( -8, -4 )
 scale = Vector2( 0.492188, 0.486328 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Mine_1" parent="." index="32" instance=ExtResource( 20 )]
+[node name="Mine_1" parent="." index="32" instance=ExtResource( 21 )]
 
 position = Vector2( 426.171, 381.947 )
 
-[node name="Mine_2" parent="." index="33" instance=ExtResource( 20 )]
+[node name="Mine_2" parent="." index="33" instance=ExtResource( 21 )]
 
 position = Vector2( 512.565, 382.581 )
 
-[node name="Mine_3" parent="." index="34" instance=ExtResource( 20 )]
+[node name="Mine_3" parent="." index="34" instance=ExtResource( 21 )]
 
 position = Vector2( 532.607, 497.824 )
 
-[node name="Mine_4" parent="." index="35" instance=ExtResource( 20 )]
+[node name="Mine_4" parent="." index="35" instance=ExtResource( 21 )]
 
 position = Vector2( 629.478, 472.771 )
 
-[node name="Player" parent="." index="36" instance=ExtResource( 21 )]
+[node name="Stone" parent="." index="36" instance=ExtResource( 22 )]
+
+position = Vector2( 1063.48, 124.44 )
+
+[node name="PlantsOne" parent="." index="37" instance=ExtResource( 23 )]
+
+position = Vector2( 360.329, -142.79 )
+
+[node name="PlantsThree" parent="." index="38" instance=ExtResource( 24 )]
+
+position = Vector2( 574.112, -159.492 )
+
+[node name="ShipWreck" parent="." index="39" instance=ExtResource( 25 )]
+
+position = Vector2( 814.619, 27.5688 )
+
+[node name="DragonSkeleton" parent="." index="40" instance=ExtResource( 26 )]
+
+position = Vector2( 513.986, 168.742 )
+
+[node name="MonkeySkeleton" parent="." index="41" instance=ExtResource( 27 )]
+
+position = Vector2( 14.6012, 349.036 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Player" parent="." index="42" instance=ExtResource( 28 )]
 
 position = Vector2( 436.281, 440.022 )
 
