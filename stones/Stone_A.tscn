@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://stones/stone_a.png" type="Texture" id=1]
+[ext_resource path="res://stones/stones_textures/boulder1.png" type="Texture" id=1]
 
 [node name="Stone_A" type="StaticBody2D" index="0"]
 

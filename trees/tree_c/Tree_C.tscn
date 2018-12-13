@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://trees/tree_c/tree_c.png" type="Texture" id=1]
-
+[ext_resource path="res://trees/trees_textures/tree_55.png" type="Texture" id=1]
 
 [node name="Tree_C" type="StaticBody2D" index="0"]
 
