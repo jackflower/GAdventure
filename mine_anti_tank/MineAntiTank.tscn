@@ -1,10 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://mine/Mine.gd" type="Script" id=1]
-[ext_resource path="res://mine/mine_body.png" type="Texture" id=2]
-[ext_resource path="res://mine/mine_flap.png" type="Texture" id=3]
-
-
+[ext_resource path="res://mine_anti_tank/MineAntiTank.gd" type="Script" id=1]
+[ext_resource path="res://mine_anti_tank/mine_anti_tank_body.png" type="Texture" id=2]
+[ext_resource path="res://mine_anti_tank/mine_anti_tank_head.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -12,7 +10,7 @@ length = 2.0
 loop = false
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite_body/Sprite_flat:modulate")
+tracks/0/path = NodePath("Sprite_head:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -24,7 +22,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite_body/Sprite_flat:scale")
+tracks/1/path = NodePath("Sprite_head:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -35,13 +33,25 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1, -0.934168 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_head:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 360.0 ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 15, 15 )
 
-[node name="Mine" type="Area2D"]
+[node name="MineAntiTank" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -56,13 +66,12 @@ script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 
-[node name="Sprite_flat" type="Sprite" parent="Sprite_body" index="0"]
+[node name="Sprite_head" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 3 )
-offset = Vector2( 8, -8 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -72,7 +81,7 @@ playback_speed = 1.0
 anims/flap_animation = SubResource( 1 )
 blend_times = [  ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
 visible = false
 shape = SubResource( 2 )

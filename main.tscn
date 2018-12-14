@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -27,7 +27,8 @@
 [ext_resource path="res://ship_wreck/ShipWreck.tscn" type="PackedScene" id=25]
 [ext_resource path="res://skeleton/DragonSkeleton.tscn" type="PackedScene" id=26]
 [ext_resource path="res://skeleton/MonkeySkeleton.tscn" type="PackedScene" id=27]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=28]
+[ext_resource path="res://mine_anti_tank/MineAntiTank.tscn" type="PackedScene" id=28]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=29]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -288,7 +289,15 @@ position = Vector2( 14.6012, 349.036 )
 scale = Vector2( -1, 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Player" parent="." index="42" instance=ExtResource( 28 )]
+[node name="MineAntiTank_1" parent="." index="42" instance=ExtResource( 28 )]
+
+position = Vector2( 392.618, 520.63 )
+
+[node name="MineAntiTank_2" parent="." index="43" instance=ExtResource( 28 )]
+
+position = Vector2( 549.92, 576.148 )
+
+[node name="Player" parent="." index="44" instance=ExtResource( 29 )]
 
 position = Vector2( 436.281, 440.022 )
 
