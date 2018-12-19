@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -17,18 +17,19 @@
 [ext_resource path="res://scenes/storagebox/StorageBox.tscn" type="PackedScene" id=15]
 [ext_resource path="res://goldcoins/GoldCoins.tscn" type="PackedScene" id=16]
 [ext_resource path="res://tree_demo.png" type="Texture" id=17]
-[ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=18]
-[ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=19]
-[ext_resource path="res://graphics/ground_graphics/ground_02.png" type="Texture" id=20]
-[ext_resource path="res://mine/Mine.tscn" type="PackedScene" id=21]
-[ext_resource path="res://stones/Stone_A.tscn" type="PackedScene" id=22]
-[ext_resource path="res://scenes/plants/plants_a/Plants_A.tscn" type="PackedScene" id=23]
-[ext_resource path="res://scenes/plants/plants_c/Plants_C.tscn" type="PackedScene" id=24]
-[ext_resource path="res://ship_wreck/ShipWreck.tscn" type="PackedScene" id=25]
-[ext_resource path="res://skeleton/DragonSkeleton.tscn" type="PackedScene" id=26]
-[ext_resource path="res://skeleton/MonkeySkeleton.tscn" type="PackedScene" id=27]
-[ext_resource path="res://mine_anti_tank/MineAntiTank.tscn" type="PackedScene" id=28]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=29]
+[ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=18]
+[ext_resource path="res://graphics/ground_graphics/ground_02.png" type="Texture" id=19]
+[ext_resource path="res://mine/Mine.tscn" type="PackedScene" id=20]
+[ext_resource path="res://stones/Stone_A.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/plants/plants_a/Plants_A.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/plants/plants_c/Plants_C.tscn" type="PackedScene" id=23]
+[ext_resource path="res://ship_wreck/ShipWreck.tscn" type="PackedScene" id=24]
+[ext_resource path="res://skeleton/DragonSkeleton.tscn" type="PackedScene" id=25]
+[ext_resource path="res://skeleton/MonkeySkeleton.tscn" type="PackedScene" id=26]
+[ext_resource path="res://mine_anti_tank/MineAntiTank.tscn" type="PackedScene" id=27]
+[ext_resource path="res://watchtower/WatchTower.tscn" type="PackedScene" id=28]
+[ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=29]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=30]
 
 [node name="Main" type="Node2D" index="0"]
 
@@ -194,30 +195,26 @@ position = Vector2( 807.552, 0.0828896 )
 scale = Vector2( 0.370563, 0.385671 )
 texture = ExtResource( 17 )
 
-[node name="Shaggy" parent="." index="27" instance=ExtResource( 18 )]
-
-position = Vector2( 607.641, 546.328 )
-
-[node name="Elixir" parent="." index="28" instance=ExtResource( 19 )]
+[node name="Elixir" parent="." index="27" instance=ExtResource( 18 )]
 
 position = Vector2( 211.41, 289.468 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Elixir2" parent="." index="29" instance=ExtResource( 19 )]
+[node name="Elixir2" parent="." index="28" instance=ExtResource( 18 )]
 
-position = Vector2( 386.192, 284.043 )
+position = Vector2( 323.271, 176.707 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Elixir3" parent="." index="30" instance=ExtResource( 19 )]
+[node name="Elixir3" parent="." index="29" instance=ExtResource( 18 )]
 
-position = Vector2( 497.453, 288.357 )
+position = Vector2( 575.179, 225.436 )
 rotation = -0.0390236
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Trawa" type="Node2D" parent="." index="31"]
+[node name="Trawa" type="Node2D" parent="." index="30"]
 
 editor/display_folded = true
 position = Vector2( 229.889, 515.234 )
@@ -231,7 +228,7 @@ __meta__ = {
 
 modulate = Color( 0.0703125, 0.0365295, 0.0365295, 0.646392 )
 scale = Vector2( 0.492188, 0.486328 )
-texture = ExtResource( 20 )
+texture = ExtResource( 19 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
@@ -241,64 +238,72 @@ __meta__ = {
 
 position = Vector2( -8, -4 )
 scale = Vector2( 0.492188, 0.486328 )
-texture = ExtResource( 20 )
+texture = ExtResource( 19 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Mine_1" parent="." index="32" instance=ExtResource( 21 )]
+[node name="Mine_1" parent="." index="31" instance=ExtResource( 20 )]
 
-position = Vector2( 426.171, 381.947 )
+position = Vector2( 339.192, 404.154 )
 
-[node name="Mine_2" parent="." index="33" instance=ExtResource( 21 )]
+[node name="Mine_2" parent="." index="32" instance=ExtResource( 20 )]
 
-position = Vector2( 512.565, 382.581 )
+position = Vector2( 721.685, 375.178 )
 
-[node name="Mine_3" parent="." index="34" instance=ExtResource( 21 )]
+[node name="Mine_3" parent="." index="33" instance=ExtResource( 20 )]
 
-position = Vector2( 532.607, 497.824 )
+position = Vector2( 736.175, 579.251 )
 
-[node name="Mine_4" parent="." index="35" instance=ExtResource( 21 )]
+[node name="Mine_4" parent="." index="34" instance=ExtResource( 20 )]
 
-position = Vector2( 629.478, 472.771 )
+position = Vector2( 679.445, 393.194 )
 
-[node name="Stone" parent="." index="36" instance=ExtResource( 22 )]
+[node name="Stone" parent="." index="35" instance=ExtResource( 21 )]
 
 position = Vector2( 1063.48, 124.44 )
 
-[node name="PlantsOne" parent="." index="37" instance=ExtResource( 23 )]
+[node name="PlantsOne" parent="." index="36" instance=ExtResource( 22 )]
 
 position = Vector2( 360.329, -142.79 )
 
-[node name="PlantsThree" parent="." index="38" instance=ExtResource( 24 )]
+[node name="PlantsThree" parent="." index="37" instance=ExtResource( 23 )]
 
 position = Vector2( 574.112, -159.492 )
 
-[node name="ShipWreck" parent="." index="39" instance=ExtResource( 25 )]
+[node name="ShipWreck" parent="." index="38" instance=ExtResource( 24 )]
 
 position = Vector2( 814.619, 27.5688 )
 
-[node name="DragonSkeleton" parent="." index="40" instance=ExtResource( 26 )]
+[node name="DragonSkeleton" parent="." index="39" instance=ExtResource( 25 )]
 
 position = Vector2( 513.986, 168.742 )
 
-[node name="MonkeySkeleton" parent="." index="41" instance=ExtResource( 27 )]
+[node name="MonkeySkeleton" parent="." index="40" instance=ExtResource( 26 )]
 
 position = Vector2( 14.6012, 349.036 )
 scale = Vector2( -1, 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MineAntiTank_1" parent="." index="42" instance=ExtResource( 28 )]
+[node name="MineAntiTank_1" parent="." index="41" instance=ExtResource( 27 )]
 
-position = Vector2( 392.618, 520.63 )
+position = Vector2( 346.353, 472.514 )
 
-[node name="MineAntiTank_2" parent="." index="43" instance=ExtResource( 28 )]
+[node name="MineAntiTank_2" parent="." index="42" instance=ExtResource( 27 )]
 
 position = Vector2( 549.92, 576.148 )
 
-[node name="Player" parent="." index="44" instance=ExtResource( 29 )]
+[node name="WatchTower" parent="." index="43" instance=ExtResource( 28 )]
 
-position = Vector2( 436.281, 440.022 )
+position = Vector2( 525.576, 390.481 )
+
+[node name="Shaggy" parent="." index="44" instance=ExtResource( 29 )]
+
+position = Vector2( 587.284, 524.121 )
+
+[node name="Player" parent="." index="45" instance=ExtResource( 30 )]
+
+position = Vector2( 423.327, 576.968 )
 
 

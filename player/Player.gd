@@ -86,4 +86,5 @@ func update_cash_copper( item ):
 	print (self.name + ": znalazłem " + item)
 	cash_copper = cash_copper + 1
 	print ("Miedź: " + String(cash_copper))
-	pass	
+	pass
+	

@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://tankette/Tankette.gd" type="Script" id=1]
+[ext_resource path="res://tankette/tankette.png" type="Texture" id=2]
+
+[node name="Tankette" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+created_bullet_scale_factor = 1
+created_bullet_speed = 200
+bullet_caliber = 2
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -4, -42, 4, -42, 4, -29, 15, -29, 15, -21, 22, -18, 22, -12, 30, -12, 30, 29, 23, 42, -23, 42, -30, 29, -30, -13, -22, -13, -22, -18, -15, -21, -15, -29, -4, -29 )
+
+[node name="BulletPosition2D" type="Position2D" parent="." index="2"]
+
+position = Vector2( 0, -60 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TimerShoot" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="4"]
+
+visible = false
+position = Vector2( -6.85453e-07, 0.500002 )
+scale = Vector2( 3.1, 4.25 )
+rect = Rect2( -10, -10, 20, 20 )
+
+[connection signal="timeout" from="TimerShoot" to="." method="_on_TimerShoot_timeout"]
+
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+
+

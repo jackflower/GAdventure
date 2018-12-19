@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://watchtower/WatchTower.gd" type="Script" id=1]
+[ext_resource path="res://watchtower/watch_tower.png" type="Texture" id=2]
+
+[node name="WatchTower" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+created_bullet_speed = 200
+created_bullet_scale_factor = 0.5
+bullet_caliber = 2
+tower_shot_range = 200
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -13, -25, -7, -25, -7, -7, -5, -7, -5, 1, 5, 1, 5, -7, 7, -7, 7, -25, 13, -25, 13, -7, 15, -7, 15, 1, 17, 2, 22, 2, 22, 24, 19, 24, 19, 25, 14, 25, 14, 29, 12, 31, -12, 31, -14, 29, -14, 25, -19, 25, -19, 24, -22, 24, -22, 2, -17, 2, -15, 1, -15, -7, -13, -7 )
+
+[node name="BulletStartPosition2D_Left" type="Position2D" parent="." index="2"]
+
+position = Vector2( -10, -40 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BulletStartPosition2D_Right" type="Position2D" parent="." index="3"]
+
+position = Vector2( 9, -40 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TimerShoot" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.25
+one_shot = false
+autostart = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="5"]
+
+visible = false
+position = Vector2( 0, 3.5 )
+scale = Vector2( 2.2, 2.45 )
+rect = Rect2( -10, -10, 20, 20 )
+
+[connection signal="timeout" from="TimerShoot" to="." method="_on_TimerShoot_timeout"]
+
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+
+

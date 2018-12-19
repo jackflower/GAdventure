@@ -45,6 +45,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0.0, 0.0, 360.0 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite_head:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -69,7 +81,7 @@ texture = ExtResource( 2 )
 [node name="Sprite_head" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
