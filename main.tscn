@@ -31,7 +31,7 @@
 [ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=29]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=30]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
