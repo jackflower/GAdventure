@@ -75,7 +75,7 @@ tracks/4/keys = {
 "values": [ Vector2( 0, 16 ), Vector2( 0, 20 ), Vector2( 0, 16 ) ]
 }
 
-[node name="DefensiveTowerGamma" type="Node2D"]
+[node name="DefensiveTowerGamma" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 shot_speed = 1

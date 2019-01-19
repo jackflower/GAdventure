@@ -1,0 +1,209 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://mech/Mech.gd" type="Script" id=1]
+[ext_resource path="res://mech/mech_graphics/mech_foot.png" type="Texture" id=2]
+[ext_resource path="res://mech/mech_graphics/mech_arm.png" type="Texture" id=3]
+[ext_resource path="res://mech/mech_graphics/mech_body.png" type="Texture" id=4]
+[ext_resource path="res://mech/mech_graphics/mech_armlet.png" type="Texture" id=5]
+[ext_resource path="res://mech/mech_graphics/mech_head_.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "animation_mech_walk"
+length = 1.0
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("mech_foot_left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -20, 0 ), Vector2( -20, -10 ), Vector2( -20, 0 ), Vector2( -20, 10 ), Vector2( -20, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mech_foot_right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, 0 ), Vector2( 20, 10 ), Vector2( 20, 0 ), Vector2( 20, -10 ), Vector2( 20, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mech_arm_left:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -18, -9 ), Vector2( -18, -7 ), Vector2( -18, -9 ), Vector2( -18, -11 ), Vector2( -18, -9 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mech_arm_right:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 18, -9 ), Vector2( 18, -11 ), Vector2( 18, -9 ), Vector2( 18, -7 ), Vector2( 18, -9 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mech_armlet_left:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -24.0, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mech_armlet_right:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.00430167, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 24.0, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mech_head:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 9 ), Vector2( 0, 10 ), Vector2( 0, 9 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 30.0
+
+[node name="Mech" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+mech_speed = 100
+created_bullet_scale_factor = 1
+created_bullet_speed = 220.0
+bullet_caliber = 2
+
+[node name="mech_members" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+
+[node name="mech_foot_left" type="Sprite" parent="mech_members" index="0"]
+
+position = Vector2( -20, 0 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="mech_foot_right" type="Sprite" parent="mech_members" index="1"]
+
+position = Vector2( 20, 0 )
+texture = ExtResource( 2 )
+flip_h = true
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="mech_arm_left" type="Sprite" parent="mech_members" index="2"]
+
+position = Vector2( -18, -9 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="cannon_left" type="Position2D" parent="mech_members/mech_arm_left" index="0"]
+
+position = Vector2( 0, -30 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="mech_arm_right" type="Sprite" parent="mech_members" index="3"]
+
+position = Vector2( 18, -9 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="cannon_right" type="Position2D" parent="mech_members/mech_arm_right" index="0"]
+
+position = Vector2( 0, -30 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="mech_body" type="Sprite" parent="mech_members" index="4"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="mech_armlet_left" type="Sprite" parent="mech_members" index="5"]
+
+position = Vector2( -13, 9 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+
+[node name="mech_armlet_right" type="Sprite" parent="mech_members" index="6"]
+
+position = Vector2( 13, 9 )
+texture = ExtResource( 5 )
+flip_h = true
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="mech_head" type="Sprite" parent="mech_members" index="7"]
+
+position = Vector2( 0, 9 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="mech_members" index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 0.75
+anims/animation_mech_walk = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+shape = SubResource( 2 )
+
+[node name="TimerShoot" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="TimerShoot" to="." method="_on_TimerShoot_timeout"]
+
+
