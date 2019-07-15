@@ -39,6 +39,7 @@ _sections_unfolded = [ "Transform" ]
 
 texture = ExtResource( 2 )
 hframes = 8
+_sections_unfolded = [ "Animation" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
@@ -47,6 +48,7 @@ shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
 
+visible = false
 position = Vector2( 0.0502528, -0.093984 )
 scale = Vector2( 0.321192, 0.751023 )
 rect = Rect2( -10, -10, 20, 20 )

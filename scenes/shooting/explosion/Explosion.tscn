@@ -50,7 +50,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 26.0
 
-[node name="Explosion" type="Area2D"]
+[node name="Explosion" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

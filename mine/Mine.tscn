@@ -4,8 +4,6 @@
 [ext_resource path="res://mine/mine_body.png" type="Texture" id=2]
 [ext_resource path="res://mine/mine_flap.png" type="Texture" id=3]
 
-
-
 [sub_resource type="Animation" id=1]
 
 length = 2.0
@@ -41,7 +39,7 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 15, 15 )
 
-[node name="Mine" type="Area2D"]
+[node name="Mine" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
