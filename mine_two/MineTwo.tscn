@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://mine_anti_tank/MineAntiTank.gd" type="Script" id=1]
-[ext_resource path="res://mine_anti_tank/mine_anti_tank_body.png" type="Texture" id=2]
-[ext_resource path="res://mine_anti_tank/mine_anti_tank_head.png" type="Texture" id=3]
+[ext_resource path="res://mine_two/MineTwo.gd" type="Script" id=1]
+[ext_resource path="res://mine_two/mine_two_body.png" type="Texture" id=2]
+[ext_resource path="res://mine_two/mine_two_head.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -63,7 +63,7 @@ tracks/3/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 15, 15 )
 
-[node name="MineAntiTank" type="Area2D" index="0"]
+[node name="MineTwo" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -73,6 +73,10 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+animation_speed_min = 1
+animation_speed_max = 4
+explosion_damage_min = 10
+explosion_damage_max = 50
 
 [node name="Sprite_body" type="Sprite" parent="." index="0"]
 

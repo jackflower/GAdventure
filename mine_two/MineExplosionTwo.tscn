@@ -1,14 +1,22 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://mine/MineExplosion.gd" type="Script" id=1]
-[ext_resource path="res://mine/explosions/red_explode.png" type="Texture" id=2]
+[ext_resource path="res://mine_one/MineExplosionOne.gd" type="Script" id=1]
+[ext_resource path="res://mine_one/explode_red.png" type="Texture" id=2]
+
+
+
+
 
 [sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
 radius = 32.0
 
 [sub_resource type="Animation" id=2]
+
 resource_name = "explode"
 length = 2.0
+loop = false
 step = 0.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -24,19 +32,44 @@ tracks/0/keys = {
 }
 
 [node name="MineExplosion" type="Area2D"]
-script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
 frame = 15
+_sections_unfolded = [ "Animation" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
 visible = false
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/explode = SubResource( 2 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
 [connection signal="body_entered" from="." to="." method="_on_MineExplosion_body_entered"]
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+

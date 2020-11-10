@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -19,12 +19,14 @@
 [ext_resource path="res://tree_demo.png" type="Texture" id=17]
 [ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=18]
 [ext_resource path="res://graphics/ground_graphics/ground_02.png" type="Texture" id=19]
+[ext_resource path="res://mine_one/MineOne.tscn" type="PackedScene" id=20]
 [ext_resource path="res://stones/Stone_A.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/plants/plants_a/Plants_A.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/plants/plants_c/Plants_C.tscn" type="PackedScene" id=23]
 [ext_resource path="res://ship_wreck/ShipWreck.tscn" type="PackedScene" id=24]
 [ext_resource path="res://skeleton/DragonSkeleton.tscn" type="PackedScene" id=25]
 [ext_resource path="res://skeleton/MonkeySkeleton.tscn" type="PackedScene" id=26]
+[ext_resource path="res://mine_two/MineTwo.tscn" type="PackedScene" id=27]
 [ext_resource path="res://watchtower/WatchTower.tscn" type="PackedScene" id=28]
 [ext_resource path="res://grass/grass_b.png" type="Texture" id=29]
 [ext_resource path="res://grass/grass_a.png" type="Texture" id=30]
@@ -231,3 +233,18 @@ position = Vector2( 568.916, 363.711 )
 
 [node name="Mech" parent="." instance=ExtResource( 34 )]
 position = Vector2( 375.328, 325.586 )
+
+[node name="MineOne" parent="." instance=ExtResource( 20 )]
+position = Vector2( 478.623, 368.235 )
+
+[node name="MineOne2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 638.565, 392.842 )
+
+[node name="MineTwo" parent="." instance=ExtResource( 27 )]
+position = Vector2( 335.085, 429.752 )
+
+[node name="MineTwo2" parent="." instance=ExtResource( 27 )]
+position = Vector2( 386.348, 472.813 )
+
+[node name="MineTwo3" parent="." instance=ExtResource( 27 )]
+position = Vector2( 572.948, 228.798 )

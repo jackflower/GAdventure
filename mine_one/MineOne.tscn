@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://mine/Mine.gd" type="Script" id=1]
-[ext_resource path="res://mine/mine_body.png" type="Texture" id=2]
-[ext_resource path="res://mine/mine_flap.png" type="Texture" id=3]
+[ext_resource path="res://mine_one/MineOne.gd" type="Script" id=1]
+[ext_resource path="res://mine_one/mine_one_body.png" type="Texture" id=2]
+[ext_resource path="res://mine_one/mine_one_flap.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -39,7 +39,7 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 15, 15 )
 
-[node name="Mine" type="Area2D" index="0"]
+[node name="MineOne" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -49,6 +49,10 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+animation_speed_min = 0.125
+animation_speed_max = 2.0
+explosion_damage_min = 10
+explosion_damage_max = 50
 
 [node name="Sprite_body" type="Sprite" parent="." index="0"]
 
@@ -75,8 +79,17 @@ blend_times = [  ]
 visible = false
 shape = SubResource( 2 )
 
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_Mine_body_entered"]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
