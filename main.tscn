@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ground/GroundTile.tres" type="TileSet" id=2]
@@ -19,14 +19,12 @@
 [ext_resource path="res://tree_demo.png" type="Texture" id=17]
 [ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=18]
 [ext_resource path="res://graphics/ground_graphics/ground_02.png" type="Texture" id=19]
-[ext_resource path="res://mine/Mine.tscn" type="PackedScene" id=20]
 [ext_resource path="res://stones/Stone_A.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/plants/plants_a/Plants_A.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/plants/plants_c/Plants_C.tscn" type="PackedScene" id=23]
 [ext_resource path="res://ship_wreck/ShipWreck.tscn" type="PackedScene" id=24]
 [ext_resource path="res://skeleton/DragonSkeleton.tscn" type="PackedScene" id=25]
 [ext_resource path="res://skeleton/MonkeySkeleton.tscn" type="PackedScene" id=26]
-[ext_resource path="res://mine_anti_tank/MineAntiTank.tscn" type="PackedScene" id=27]
 [ext_resource path="res://watchtower/WatchTower.tscn" type="PackedScene" id=28]
 [ext_resource path="res://grass/grass_b.png" type="Texture" id=29]
 [ext_resource path="res://grass/grass_a.png" type="Texture" id=30]
@@ -35,300 +33,201 @@
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=33]
 [ext_resource path="res://mech/Mech.tscn" type="PackedScene" id=34]
 
-[node name="Main" type="Node2D" index="0"]
-
+[node name="Main" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="TileMap" type="TileMap" parent="." index="0"]
-
+[node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -1, 0 )
-mode = 0
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 256, 256 )
-cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
-occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="BushComponent_1" parent="." index="1" instance=ExtResource( 3 )]
-
+[node name="BushComponent_1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 54.1649, 27.7823 )
 
-[node name="BushComponent_2" parent="." index="2" instance=ExtResource( 3 )]
-
+[node name="BushComponent_2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 157.096, 21.323 )
 rotation = 1.19164
 
-[node name="BushComponent_4" parent="." index="3" instance=ExtResource( 3 )]
-
+[node name="BushComponent_4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 249.601, 33.5663 )
 rotation = -2.82818
 
-[node name="BushComponent_3" parent="." index="4" instance=ExtResource( 3 )]
-
+[node name="BushComponent_3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 22.3207, 120.661 )
 
-[node name="Plant_1" parent="." index="5" instance=ExtResource( 4 )]
-
+[node name="Plant_1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 773.968, 192.025 )
 rotation = 0.42214
 scale = Vector2( 0.654957, 0.606788 )
 
-[node name="Plant_2" parent="." index="6" instance=ExtResource( 4 )]
-
+[node name="Plant_2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 905.243, 207.909 )
 rotation = 2.5393
 scale = Vector2( 0.627976, 0.64688 )
 
-[node name="Plant_3" parent="." index="7" instance=ExtResource( 4 )]
-
+[node name="Plant_3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 840.014, 240.239 )
 rotation = -1.44021
 scale = Vector2( 0.440149, 0.404791 )
 
-[node name="Plant_4" parent="." index="8" instance=ExtResource( 4 )]
-
+[node name="Plant_4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 29.9456, 275.834 )
 rotation = 0.806625
 scale = Vector2( 0.421544, 0.443161 )
 
-[node name="Plant_5" parent="." index="9" instance=ExtResource( 4 )]
-
+[node name="Plant_5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 54.4524, 202.594 )
 rotation = 0.373015
 scale = Vector2( 0.635822, 0.564775 )
 
-[node name="Plant_6" parent="." index="10" instance=ExtResource( 4 )]
-
+[node name="Plant_6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 348.293, 39.3492 )
 rotation = 0.223465
 scale = Vector2( 0.635822, 0.564775 )
 
-[node name="PlantsTwo" parent="Plant_6" index="1" instance=ExtResource( 5 )]
-
+[node name="PlantsTwo" parent="Plant_6" instance=ExtResource( 5 )]
 position = Vector2( 121.123, -243.437 )
 
-[node name="BushSmall_2" parent="." index="11" instance=ExtResource( 6 )]
-
+[node name="BushSmall_2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 829.943, 480.212 )
 
-[node name="BushSmall_4" parent="." index="12" instance=ExtResource( 6 )]
-
+[node name="BushSmall_4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1002.71, 318.328 )
 rotation = -2.08791
 
-[node name="BushSmall_3" parent="." index="13" instance=ExtResource( 6 )]
-
+[node name="BushSmall_3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 178.494, 452.145 )
 
-[node name="BushSmall_5" parent="." index="14" instance=ExtResource( 6 )]
-
+[node name="BushSmall_5" parent="." instance=ExtResource( 6 )]
 position = Vector2( 83.067, 511.219 )
 
-[node name="WaterPump_1" parent="." index="15" instance=ExtResource( 7 )]
-
+[node name="WaterPump_1" parent="." instance=ExtResource( 7 )]
 modulate = Color( 1, 1, 1, 0.574588 )
 position = Vector2( 618.736, 64.1551 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="WaterPump_2" parent="." index="16" instance=ExtResource( 7 )]
-
+[node name="WaterPump_2" parent="." instance=ExtResource( 7 )]
 modulate = Color( 1, 1, 1, 0.801098 )
 position = Vector2( 233.74, 103.066 )
 scale = Vector2( 1.25, 1.25 )
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="Tower" parent="." index="17" instance=ExtResource( 8 )]
-
+[node name="Tower" parent="." instance=ExtResource( 8 )]
 position = Vector2( 115.812, 92.4942 )
 
-[node name="GunBodyAlpha" parent="." index="18" instance=ExtResource( 9 )]
-
+[node name="GunBodyAlpha" parent="." instance=ExtResource( 9 )]
 position = Vector2( 968.705, 53.4459 )
 
-[node name="DefensiveTowerAlpha" parent="." index="19" instance=ExtResource( 10 )]
-
+[node name="DefensiveTowerAlpha" parent="." instance=ExtResource( 10 )]
 position = Vector2( 775.824, 276.923 )
 
-[node name="DefensiveTowerBeta" parent="." index="20" instance=ExtResource( 11 )]
-
+[node name="DefensiveTowerBeta" parent="." instance=ExtResource( 11 )]
 position = Vector2( 938.159, 355.219 )
 
-[node name="DefensiveTowerGamma" parent="." index="21" instance=ExtResource( 12 )]
-
+[node name="DefensiveTowerGamma" parent="." instance=ExtResource( 12 )]
 position = Vector2( 452.114, 54.5714 )
 
-[node name="DefensiveTowerDelta" parent="." index="22" instance=ExtResource( 13 )]
-
+[node name="DefensiveTowerDelta" parent="." instance=ExtResource( 13 )]
 position = Vector2( 114.533, 260.05 )
 
-[node name="KeyContainer" parent="." index="23" instance=ExtResource( 14 )]
-
+[node name="KeyContainer" parent="." instance=ExtResource( 14 )]
 position = Vector2( 121.7, 349.414 )
 
-[node name="StorageBox" parent="." index="24" instance=ExtResource( 15 )]
-
+[node name="StorageBox" parent="." instance=ExtResource( 15 )]
 position = Vector2( 941.995, 548.579 )
 
-[node name="GoldCoins" parent="." index="25" instance=ExtResource( 16 )]
-
+[node name="GoldCoins" parent="." instance=ExtResource( 16 )]
 position = Vector2( 957.056, 110.047 )
 
-[node name="tree_demo" type="Sprite" parent="." index="26"]
-
+[node name="tree_demo" type="Sprite" parent="."]
 position = Vector2( 807.552, 0.0828896 )
 scale = Vector2( 0.370563, 0.385671 )
 texture = ExtResource( 17 )
 
-[node name="Elixir" parent="." index="27" instance=ExtResource( 18 )]
-
+[node name="Elixir" parent="." instance=ExtResource( 18 )]
 position = Vector2( 211.41, 289.468 )
 scale = Vector2( 0.5, 0.5 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="Elixir2" parent="." index="28" instance=ExtResource( 18 )]
-
+[node name="Elixir2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 323.271, 176.707 )
 scale = Vector2( 0.5, 0.5 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="Elixir3" parent="." index="29" instance=ExtResource( 18 )]
-
+[node name="Elixir3" parent="." instance=ExtResource( 18 )]
 position = Vector2( 425.952, 198.304 )
 rotation = -0.0390236
 scale = Vector2( 0.5, 0.5 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="Trawa" type="Node2D" parent="." index="30"]
-
-editor/display_folded = true
+[node name="Trawa" type="Node2D" parent="."]
 position = Vector2( 229.889, 515.234 )
 rotation = -0.428126
-_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="ground_02" type="Sprite" parent="Trawa" index="0"]
-
+[node name="ground_02" type="Sprite" parent="Trawa"]
 modulate = Color( 0.0703125, 0.0365295, 0.0365295, 0.646392 )
 scale = Vector2( 0.492188, 0.486328 )
 texture = ExtResource( 19 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="ground_03" type="Sprite" parent="Trawa" index="1"]
-
+[node name="ground_03" type="Sprite" parent="Trawa"]
 position = Vector2( -8, -4 )
 scale = Vector2( 0.492188, 0.486328 )
 texture = ExtResource( 19 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Mine_1" parent="." index="31" instance=ExtResource( 20 )]
-
-position = Vector2( 300.001, 426.764 )
-
-[node name="Mine_2" parent="." index="32" instance=ExtResource( 20 )]
-
-position = Vector2( 836.243, 414.369 )
-
-[node name="Mine_3" parent="." index="33" instance=ExtResource( 20 )]
-
-position = Vector2( 736.175, 579.251 )
-
-[node name="Mine_4" parent="." index="34" instance=ExtResource( 20 )]
-
-position = Vector2( 679.445, 393.194 )
-
-[node name="Stone" parent="." index="35" instance=ExtResource( 21 )]
-
+[node name="Stone" parent="." instance=ExtResource( 21 )]
 position = Vector2( 1063.48, 124.44 )
 
-[node name="PlantsOne" parent="." index="36" instance=ExtResource( 22 )]
-
+[node name="PlantsOne" parent="." instance=ExtResource( 22 )]
 position = Vector2( 360.329, -142.79 )
 
-[node name="PlantsThree" parent="." index="37" instance=ExtResource( 23 )]
-
+[node name="PlantsThree" parent="." instance=ExtResource( 23 )]
 position = Vector2( 574.112, -159.492 )
 
-[node name="ShipWreck" parent="." index="38" instance=ExtResource( 24 )]
-
+[node name="ShipWreck" parent="." instance=ExtResource( 24 )]
 position = Vector2( 814.619, 27.5688 )
 
-[node name="DragonSkeleton" parent="." index="39" instance=ExtResource( 25 )]
-
+[node name="DragonSkeleton" parent="." instance=ExtResource( 25 )]
 position = Vector2( 513.986, 168.742 )
 
-[node name="MonkeySkeleton" parent="." index="40" instance=ExtResource( 26 )]
-
+[node name="MonkeySkeleton" parent="." instance=ExtResource( 26 )]
 position = Vector2( 14.6012, 349.036 )
 scale = Vector2( -1, 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="MineAntiTank_1" parent="." index="41" instance=ExtResource( 27 )]
-
-position = Vector2( 343.338, 513.212 )
-
-[node name="MineAntiTank_2" parent="." index="42" instance=ExtResource( 27 )]
-
-position = Vector2( 666.801, 567.946 )
-
-[node name="WatchTower" parent="." index="43" instance=ExtResource( 28 )]
-
+[node name="WatchTower" parent="." instance=ExtResource( 28 )]
 position = Vector2( 686.916, 190.357 )
 
-[node name="grass_b" type="Sprite" parent="." index="44"]
-
+[node name="grass_b" type="Sprite" parent="."]
 position = Vector2( -105.783, -21.8046 )
 texture = ExtResource( 29 )
 
-[node name="grass_a" type="Sprite" parent="." index="45"]
-
+[node name="grass_a" type="Sprite" parent="."]
 position = Vector2( 1147.1, 275.525 )
 texture = ExtResource( 30 )
 
-[node name="grass_c" type="Sprite" parent="." index="46"]
-
+[node name="grass_c" type="Sprite" parent="."]
 position = Vector2( 406.854, 595.41 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 31 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="Shaggy" parent="." index="47" instance=ExtResource( 32 )]
-
+[node name="Shaggy" parent="." instance=ExtResource( 32 )]
 position = Vector2( 587.284, 524.121 )
 
-[node name="Player" parent="." index="48" instance=ExtResource( 33 )]
-
+[node name="Player" parent="." instance=ExtResource( 33 )]
 position = Vector2( 568.916, 363.711 )
 
-[node name="Mech" parent="." index="49" instance=ExtResource( 34 )]
-
+[node name="Mech" parent="." instance=ExtResource( 34 )]
 position = Vector2( 375.328, 325.586 )
-
-
