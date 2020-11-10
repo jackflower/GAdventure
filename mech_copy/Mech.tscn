@@ -101,7 +101,7 @@ tracks/6/keys = {
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 29.0
+radius = 30.0
 
 [node name="Mech" type="KinematicBody2D" index="0"]
 
@@ -118,6 +118,7 @@ bullet_caliber = 2
 
 [node name="mech_members" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
 rotation = 1.5708
 _sections_unfolded = [ "Transform" ]
 
