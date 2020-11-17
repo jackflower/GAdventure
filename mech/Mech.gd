@@ -13,6 +13,8 @@ var bullet_data = preload("bullet/Bullet.tscn")
 var fireball_data = preload("bullet/Fireball.tscn")
 var current_bullet_data = bullet_data
 
+var on_scene = false
+
 export (float) var created_bullet_scale_factor = 1
 export (float) var created_bullet_speed = 200
 export (float) var bullet_caliber = 2
@@ -21,6 +23,7 @@ export (float) var bullet_caliber = 2
 func _ready():
 	target = self.global_position
 	target.x = target.x + 0.0001 # unikamy wektora zerowego
+	on_scene = true
 	set_physics_process(true)
 	pass
 	
@@ -37,8 +40,8 @@ func _input(event):
 	if event.is_action_pressed('Fireball'):
 		current_bullet_data = fireball_data
 	pass
-		
-		
+	
+	
 func _physics_process(delta):
 	
 	#velocity = (target - position).normalized() * mech_speed * delta # two
@@ -56,8 +59,8 @@ func _physics_process(delta):
 	if(health <= 0):
 		self.queue_free()
 	pass
-		
-		
+	
+	
 func update_health(damage):
 	health -= damage
 	print("Health: " + String(health))
@@ -98,4 +101,3 @@ func Shot():
 	
 	pass
 	
-

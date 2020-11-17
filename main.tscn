@@ -9,10 +9,10 @@
 [ext_resource path="res://scenes/waterpump/WaterPump.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/shooting/tower/Tower.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/guns/GunBodyAlpha.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/weapon/towers/defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=13]
+[ext_resource path="res://defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=10]
+[ext_resource path="res://defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=11]
+[ext_resource path="res://defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=12]
+[ext_resource path="res://defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/keycontainer/KeyContainer.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/storagebox/StorageBox.tscn" type="PackedScene" id=15]
 [ext_resource path="res://goldcoins/GoldCoins.tscn" type="PackedScene" id=16]
@@ -128,18 +128,6 @@ position = Vector2( 115.812, 92.4942 )
 [node name="GunBodyAlpha" parent="." instance=ExtResource( 9 )]
 position = Vector2( 968.705, 53.4459 )
 
-[node name="DefensiveTowerAlpha" parent="." instance=ExtResource( 10 )]
-position = Vector2( 775.824, 276.923 )
-
-[node name="DefensiveTowerBeta" parent="." instance=ExtResource( 11 )]
-position = Vector2( 938.159, 355.219 )
-
-[node name="DefensiveTowerGamma" parent="." instance=ExtResource( 12 )]
-position = Vector2( 452.114, 54.5714 )
-
-[node name="DefensiveTowerDelta" parent="." instance=ExtResource( 13 )]
-position = Vector2( 114.533, 260.05 )
-
 [node name="KeyContainer" parent="." instance=ExtResource( 14 )]
 position = Vector2( 121.7, 349.414 )
 
@@ -226,16 +214,16 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 31 )
 
 [node name="Shaggy" parent="." instance=ExtResource( 32 )]
-position = Vector2( 587.284, 524.121 )
+position = Vector2( 917.284, 328.121 )
 
 [node name="Player" parent="." instance=ExtResource( 33 )]
-position = Vector2( 568.916, 363.711 )
+position = Vector2( 902.916, 395.711 )
 
 [node name="Mech" parent="." instance=ExtResource( 34 )]
-position = Vector2( 375.328, 325.586 )
+position = Vector2( 607.328, 317.586 )
 
 [node name="MineOne" parent="." instance=ExtResource( 20 )]
-position = Vector2( 478.623, 368.235 )
+position = Vector2( 202.623, 356.235 )
 
 [node name="MineOne2" parent="." instance=ExtResource( 20 )]
 position = Vector2( 638.565, 392.842 )
@@ -248,3 +236,15 @@ position = Vector2( 386.348, 472.813 )
 
 [node name="MineTwo3" parent="." instance=ExtResource( 27 )]
 position = Vector2( 572.948, 228.798 )
+
+[node name="DefensiveTowerAlpha" parent="." instance=ExtResource( 10 )]
+position = Vector2( 300.661, 286.228 )
+
+[node name="DefensiveTowerBeta" parent="." instance=ExtResource( 11 )]
+position = Vector2( 376.6, 344.809 )
+
+[node name="DefensiveTowerDelta" parent="." instance=ExtResource( 12 )]
+position = Vector2( 454.6, 412.809 )
+
+[node name="DefensiveTowerGamma" parent="." instance=ExtResource( 13 )]
+position = Vector2( 526.599, 484.809 )

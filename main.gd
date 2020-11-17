@@ -6,10 +6,10 @@ extends Node2D
 
 func _ready():
 	$Tower.setTarget($Player)
-	$DefensiveTowerAlpha.setTarget($Player)
-	$DefensiveTowerBeta.setTarget($Player)
-	$DefensiveTowerGamma.setTarget($Player)
-	$DefensiveTowerDelta.setTarget($Player)
+	$DefensiveTowerAlpha.setTarget($Mech)
+	$DefensiveTowerBeta.setTarget($Mech)
+	$DefensiveTowerGamma.setTarget($Mech)
+	$DefensiveTowerDelta.setTarget($Mech)
 	$WatchTower.setTarget($Player)
 	pass
 	
