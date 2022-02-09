@@ -4,8 +4,12 @@ extends StaticBody2D
 # Wieża defensywna  B e t a
 # ten obiekt jest skadową kompletnego obiektu
 # obiekt aktualizuje swój stan
+#
+# obiekt może być umieszczony niezależnie na scenie
+# aktualizując swój stan - health
+#
 
-var health: float = 10
+var health: float = 100
 
 func _ready():
 	set_physics_process(true)

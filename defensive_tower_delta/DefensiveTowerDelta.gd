@@ -10,7 +10,7 @@ extends Node2D
 # that will be the target by calling
 # the  setTarget (Target)  function.
 
-var health = 100
+export(float, 100) var health = 100
 
 var can_shoot_animation = true
 var prev_shooting = false
@@ -32,7 +32,7 @@ var bullet_data = preload("DefensiveTowerBulletDelta.tscn")
 #	- single fire / continuous fire
 #	- caliber transferred to the projectile
 #	- the range of the shot from the tower
-export (float) var  shot_speed = 1
+export (float, 0.125, 10) var  shot_speed = 1
 export (float) var created_bullet_speed = 200
 export (float) var created_bullet_scale_factor = 0.5
 export (bool) var shooting_series = true
@@ -43,6 +43,13 @@ export (float) var tower_shot_range = 200
 func _ready():
 	set_physics_process(true)
 	#set_process(true)
+	
+	# january 28, 2022
+	$Base/TowerBaseDelta.health = health
+	
+	# january 26, 2022
+	# przygotować mechanizm zarządzania grupami obiektów
+	add_to_group("towers")
 	pass
 	
 	
@@ -51,14 +58,9 @@ func _ready():
 	
 	
 func _physics_process(delta):
-	
-	if not $Base/TowerBaseDelta.health:
-		health = 0
-		
-		
-	if(health <= 0):
-		self.queue_free()
-		pass
+	if $Base/TowerBaseDelta:
+		if $Base/TowerBaseDelta.health <= 0 :
+			self.queue_free()
 		
 		
 	if(my_target):
@@ -67,6 +69,8 @@ func _physics_process(delta):
 				target_position = target_reference.get_ref().global_position
 				tower_rotation = atan2(( global_position.x - target_position.x ),
 						( global_position.y - target_position.y ))
+				
+				tower_rotation = tower_rotation + self.rotation
 				
 				distance_to_target = global_position.distance_to(target_position)
 				
@@ -118,4 +122,8 @@ func setTarget( target ):
 
 func _on_AnimationPlayerTowerDelta_animation_finished( anim_name ):
 	can_shoot_animation = true
+	pass
+	
+func alfa():
+	self.scale.x = 2.0
 	pass

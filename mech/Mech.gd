@@ -47,7 +47,7 @@ func _physics_process(delta):
 	#velocity = (target - position).normalized() * mech_speed * delta # two
 	velocity = (target - position).normalized() * mech_speed
 	rotation = velocity.angle()
-
+	
 	if (target - position).length() > 5:
 		velocity = move_and_slide(velocity)
 		$mech_members/AnimationPlayer.play("animation_mech_walk")

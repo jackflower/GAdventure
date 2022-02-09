@@ -10,7 +10,7 @@ extends Node2D
 # that will be the target by calling
 # the  setTarget (Target)  function.
 
-var health = 100
+export(float, 100) var health = 100
 
 var can_shoot_animation = true
 var prev_shooting = false
@@ -32,7 +32,7 @@ var bullet_data = preload("DefensiveTowerBulletAlpha.tscn")
 #	- single fire / continuous fire
 #	- caliber transferred to the projectile
 #	- the range of the shot from the tower
-export (float) var shot_speed = 1
+export (float, 0.125, 10) var  shot_speed = 1
 export (float) var created_bullet_speed = 200
 export (float) var created_bullet_scale_factor = 0.5
 export (bool) var shooting_series = true
@@ -40,9 +40,34 @@ export (float) var bullet_caliber = 2
 export (float) var tower_shot_range = 200
 
 
+signal tower_alpha_shoot
+
 func _ready():
 	set_physics_process(true)
 	#set_process(true)
+	
+	# january 28, 2022
+	$Base/TowerBaseAlpha.health = health
+	
+	#
+	# february 15, 2021
+	#  - signal
+	#
+	# można z tego poziomu podłaczyć sygnał...
+	#self.connect("tower_alpha_shoot",get_node("../WaterPump"),"_on_DefensiveTowerAlpha_tower_alpha_shoot")	
+	# january 20, 2022
+	# description:
+	# Podłączamy sygnał "tower_alpha_shoot" zdefiniowany w tym obiekcie { DefensiveTowerAlpha }
+	# do obiektu/węzła { WaterPump }, ze wskazaniem wykonania metody
+	# "_on_DefensiveTowerAlpha_tower_alpha_shoot", którą znadjuje się
+	# w obiekcie WaterPump /metoda skaluje \wizualizacja\ obiekt...
+	#
+	# jakkolwiek - podłączenie sygnału w edytorze - jest aktywne...
+	
+	# january 26, 2022
+	# przygotować mechanizm zarządzania grupami obiektów
+	add_to_group("towers")
+	
 	pass
 	
 	
@@ -51,14 +76,9 @@ func _ready():
 	
 	
 func _physics_process(delta):
-	
-	if not $Base/TowerBaseAlpha.health:
-		health = 0
-		
-		
-	if(health <= 0):
-		self.queue_free()
-		pass
+	if $Base/TowerBaseAlpha:
+		if $Base/TowerBaseAlpha.health <= 0 :
+			self.queue_free()
 		
 		
 	if(my_target):
@@ -67,6 +87,8 @@ func _physics_process(delta):
 				target_position = target_reference.get_ref().global_position
 				tower_rotation = atan2(( global_position.x - target_position.x ),
 						( global_position.y - target_position.y ))
+				
+				tower_rotation = tower_rotation + self.rotation
 				
 				distance_to_target = global_position.distance_to(target_position)
 				
@@ -89,6 +111,10 @@ func _physics_process(delta):
 	
 	
 func create_bullet():
+	
+	# signal test...
+	emit_signal("tower_alpha_shoot")
+	
 	# bullet - creation of an instance
 	var bullet = bullet_data.instance()
 	# bullet - position
@@ -118,4 +144,9 @@ func setTarget( target ):
 
 func _on_AnimationPlayerTowerAlpha_animation_finished( anim_name ):
 	can_shoot_animation = true
+	pass
+	
+	
+func alfa():
+	self.scale.x = 2.0
 	pass

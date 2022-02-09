@@ -220,7 +220,8 @@ position = Vector2( 917.284, 328.121 )
 position = Vector2( 902.916, 395.711 )
 
 [node name="Mech" parent="." instance=ExtResource( 34 )]
-position = Vector2( 607.328, 317.586 )
+position = Vector2( 767.328, 345.586 )
+rotation = -2.52052
 
 [node name="MineOne" parent="." instance=ExtResource( 20 )]
 position = Vector2( 202.623, 356.235 )
@@ -239,12 +240,15 @@ position = Vector2( 572.948, 228.798 )
 
 [node name="DefensiveTowerAlpha" parent="." instance=ExtResource( 10 )]
 position = Vector2( 300.661, 286.228 )
+rotation = 0.841046
 
 [node name="DefensiveTowerBeta" parent="." instance=ExtResource( 11 )]
 position = Vector2( 376.6, 344.809 )
 
 [node name="DefensiveTowerDelta" parent="." instance=ExtResource( 12 )]
-position = Vector2( 454.6, 412.809 )
+position = Vector2( 464.6, 406.809 )
+rotation = 0.74231
 
 [node name="DefensiveTowerGamma" parent="." instance=ExtResource( 13 )]
-position = Vector2( 526.599, 484.809 )
+position = Vector2( 632.599, 518.809 )
+rotation = -0.448477
