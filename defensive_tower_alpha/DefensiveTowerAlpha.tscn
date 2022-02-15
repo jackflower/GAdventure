@@ -78,4 +78,5 @@ position = Vector2( 0, -50 )
 
 [node name="AnimationPlayerTowerAlpha" type="AnimationPlayer" parent="."]
 anims/tower_alpha_animation = SubResource( 1 )
+
 [connection signal="animation_finished" from="AnimationPlayerTowerAlpha" to="." method="_on_AnimationPlayerTowerAlpha_animation_finished"]

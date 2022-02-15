@@ -3,6 +3,7 @@
 [ext_resource path="res://defensive_tower_beta/defensive_tower_graphics_beta/defensive_tower_barrel_beta.png" type="Texture" id=1]
 
 
+
 [node name="DefensiveTowerBarrelBeta" type="Node2D"]
 
 [node name="TowerBarrelBeta" type="StaticBody2D" parent="." index="0"]

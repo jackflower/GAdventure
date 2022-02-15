@@ -1,7 +1,7 @@
 extends Node2D
 
 # Scinfor - jackflower
-# July 23, 2018
+# July 24, 2018
 #
 # The scene represents a missile dedicated
 # to a given type of defense tower
@@ -44,7 +44,7 @@ func _physics_process(delta):
 	
 	
 func explode():
-	var explosion = preload("../explosion/Explosion.tscn").instance()
+	var explosion = preload("../../explosion/Explosion.tscn").instance()
 	explosion.global_position = $KinematicBody2D.global_position
 	explosion.global_scale = $KinematicBody2D.global_scale
 	explosion.get_node("AnimatedSprite").get_sprite_frames().set_animation_speed(explosion.get_node("AnimatedSprite").get_animation(), bullet_speed)

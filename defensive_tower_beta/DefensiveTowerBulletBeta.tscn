@@ -5,14 +5,10 @@
 [ext_resource path="res://defensive_tower_beta/defensive_tower_graphics_beta/defensive_tower_bullet_indicator_beta.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
 extents = Vector2( 2.5, 5 )
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "defensive_tower_bullet_alpha_animation"
-length = 1.0
 loop = true
 step = 0.0
 tracks/0/type = "value"
@@ -29,51 +25,30 @@ tracks/0/keys = {
 }
 
 [node name="DefensiveTowerBulletBeta" type="Node2D"]
-
 script = ExtResource( 1 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-
-[node name="Sprite_bullet" type="Sprite" parent="KinematicBody2D" index="0"]
-
+[node name="Sprite_bullet" type="Sprite" parent="KinematicBody2D"]
 texture = ExtResource( 2 )
 
-[node name="Sprite_bullet_indicator" type="Sprite" parent="KinematicBody2D" index="1"]
-
+[node name="Sprite_bullet_indicator" type="Sprite" parent="KinematicBody2D"]
 position = Vector2( 0, -4.5 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="2"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 visible = false
 position = Vector2( -0.00173426, 0 )
 scale = Vector2( 0.999714, 1 )
 shape = SubResource( 1 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="KinematicBody2D" index="3"]
-
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="KinematicBody2D"]
 visible = false
 position = Vector2( 1.3411e-07, 1.49012e-08 )
 scale = Vector2( 0.4, 0.7 )
-rect = Rect2( -10, -10, 20, 20 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D" index="4"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 autoplay = "defensive_tower_bullet_alpha_animation"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/defensive_tower_bullet_alpha_animation = SubResource( 2 )
-blend_times = [  ]
 
 [connection signal="screen_exited" from="KinematicBody2D/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
-
-

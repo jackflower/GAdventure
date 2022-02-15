@@ -3,6 +3,7 @@
 [ext_resource path="res://defensive_tower_delta/defensive_tower_graphics_delta/defensive_tower_turret_delta.png" type="Texture" id=1]
 
 
+
 [node name="DefensiveTowerTurretDelta" type="Node2D" index="0"]
 
 [node name="TowerTurretDelta" type="StaticBody2D" parent="." index="0"]

@@ -2,6 +2,7 @@
 
 [ext_resource path="res://defensive_tower_beta/defensive_tower_graphics_beta/defensive_tower_cannon_shield_beta.png" type="Texture" id=1]
 
+
 [node name="DefensiveTowerCannonShieldBeta" type="Node2D"]
 
 [node name="TowerCannonShieldBeta" type="StaticBody2D" parent="." index="0"]

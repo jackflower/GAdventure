@@ -4,6 +4,7 @@
 [ext_resource path="res://defensive_tower_delta/defensive_tower_graphics_delta/defensive_tower_base_piston_delta.png" type="Texture" id=2]
 [ext_resource path="res://defensive_tower_delta/TowerBaseDelta.gd" type="Script" id=3]
 
+
 [sub_resource type="Animation" id=1]
 resource_name = "piston_animation"
 loop = true

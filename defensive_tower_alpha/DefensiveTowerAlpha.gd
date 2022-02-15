@@ -38,7 +38,7 @@ export (float) var created_bullet_scale_factor = 0.5
 export (bool) var shooting_series = true
 export (float) var bullet_caliber = 2
 export (float) var tower_shot_range = 200
-
+export (float) var time_of_dying = 1.0
 
 signal tower_alpha_shoot
 
@@ -127,7 +127,7 @@ func create_bullet():
 	bullet_vector = (target_position - global_position).normalized()
 	bullet.bullet_direction = Vector2(bullet_vector)
 	# bullet - rotation
-	bullet.global_rotation_degrees = $Base/Turret.rotation_degrees
+	bullet.global_rotation_degrees = $Base/Turret.rotation_degrees + self.rotation_degrees
 	# caliber
 	bullet.caliber = bullet_caliber
 	# add a projectile to the scene
@@ -140,10 +140,16 @@ func setTarget( target ):
 	target_reference = weakref(my_target)
 	tower_process_enabled = true
 	pass
-
-
+	
+	
 func _on_AnimationPlayerTowerAlpha_animation_finished( anim_name ):
 	can_shoot_animation = true
+	pass
+	
+	
+func prepare_to_death(wait_time: float = time_of_dying) -> void:
+	$Base.set_physics_process(false)
+	set_physics_process(false)
 	pass
 	
 	
